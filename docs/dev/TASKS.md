@@ -134,11 +134,39 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
             Contract: C02 in SPEC. Outcome/evidence: Apply toggle rejection, preserved hold, ghost policy and explicit hard-drop/general-lock transitions with same-value no-reset behavior.
         - [ ] T-035 — Verify session configuration and document controls
             Scope: tests/browser, README.md, RELEASE-NOTES.md. Depends on: T-034.
-            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, mid-fall/grounded changes, disabled shortcuts, restart retention and default restoration on reload in both browsers.
+            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, mid-fall/grounded changes, disabled shortcuts, restart retention and unpersisted model defaults before persistence adapters are composed in both browsers. Phase 5 supplies durable restore, and final regressions use its persisted expectations.
         - [ ] T-036 — Review, test and report milestone 4.2
             Depends on: T-034, T-035. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
             Report: docs/dev/reports/phases/4/4.2.md. Publish evidence and close constituent issues before milestone closure.
     - [ ] Milestone 4.3 — Phase review
         - [ ] T-037 — Review, test and report phase 4
             Depends on: delivery milestones 4.1, 4.2 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
-            Report: docs/dev/reports/phases/4/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.4.0 under the separately authorized release workflow.
+            Report: docs/dev/reports/phases/4/PHASE-REPORT.md. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.4.0 under the separately authorized release workflow.
+
+## Phase 5 — Persistent configuration
+
+- [ ] Phase 5 — Persistent configuration
+    - [ ] Milestone 5.1 — Independent restore precedence
+        - [ ] T-038 — Implement cookie and URL parsing and resolution
+            Scope: src/settings/browser-config.ts, src/settings/model.ts, tests/unit. Depends on: T-037.
+            Contract: S01 in SPEC. Outcome/evidence: Parse only allowlisted keys, strict values and duplicates; resolve each field independently and test invalid sources without mutating unrelated values.
+        - [ ] T-039 — Integrate startup restore and explicit URL cookie writes
+            Scope: src/main.ts, src/settings/browser-config.ts, tests/browser. Depends on: T-038.
+            Contract: S01 in SPEC. Outcome/evidence: Load before game creation and persist valid explicit URL values, including defaults; omitted/invalid parameters retain existing saved values.
+        - [ ] T-040 — Review, test and report milestone 5.1
+            Depends on: T-038, T-039. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/5/5.1.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 5.2 — Synchronized selection and resilience
+        - [ ] T-041 — Implement cookie/history writes and storage failure handling
+            Scope: src/settings/browser-config.ts, src/app/controller.ts, tests/unit. Depends on: T-040.
+            Contract: S02 in SPEC. Outcome/evidence: Write only selected settings with specified cookie attributes, replace URL parameter preserving fragment/other keys, attempt stores independently and expose non-blocking failure status.
+        - [ ] T-042 — Verify reload precedence and persistent settings usability
+            Scope: tests/browser, tests/unit, README.md, RELEASE-NOTES.md. Depends on: T-041.
+            Contract: S01,S02 in SPEC. Outcome/evidence: Run six-field mixed-source, explicit-default, omitted/invalid, duplicate and blocked-storage scenarios in Chromium and Firefox; verify reload/new-page behavior and session-only board state.
+        - [ ] T-043 — Review, test and report milestone 5.2
+            Depends on: T-041, T-042. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/5/5.2.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 5.3 — Phase review
+        - [ ] T-044 — Review, test and report phase 5
+            Depends on: delivery milestones 5.1, 5.2 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
+            Report: docs/dev/reports/phases/5/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.5.0 under the separately authorized release workflow.
