@@ -7,7 +7,7 @@ Deliver a usable classic game first, then bounded capabilities on its integrated
 | Phase | Capability / included contracts | Planned release | Prerequisite |
 | --- | --- | --- | --- |
 | 1 — Playable classic baseline | B01–B05, Q01 | v0.1.0 | None |
-| 2 — Modern piece control | E01–E05 | v0.2.0 | Phase 1 verified, integrated and published |
+| 2 — Modern piece control | E01–E05, G01 | v0.2.0 | Phase 1 verified, integrated and published |
 
 ## Phase 1 — Playable classic baseline
 
@@ -47,7 +47,7 @@ Exit: verify included contracts, relevant prior regressions and integrated compo
 
 ### Milestone 2.2 — Hold and landing tools
 
-Hold, ghost and hard drop share the active lifecycle and canonical landing.
+Hold, ghost and hard drop share the active lifecycle and canonical landing. Dynamic ghost visibility is included in the existing projection seam.
 
 Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/2/2.2.md`.
 
@@ -65,7 +65,7 @@ Exactly one phase code review/testing/report outcome follows completion and, whe
 
 Phase 1 has three delivery milestones: pure placement, integrated playable loop and verified distribution. The last is narrow (browser acceptance, packaging and instructions) because it provides independent reproducibility evidence for release.
 
-Modern gameplay has three delivery milestones: fair supply/rotation, piece tools and grounded timing.
+Modern gameplay has three delivery milestones: fair supply/rotation, piece tools and grounded timing. Conditional visibility belongs to the existing ghost outcome, avoiding a tiny independent phase.
 
 Dedicated phase review milestones and report-only tasks are excluded from delivery counts. A complete task list is derived in [TASKS](TASKS.md) after physical ownership is established in [layout](layout.md).
 
