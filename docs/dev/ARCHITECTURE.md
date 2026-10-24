@@ -18,6 +18,10 @@ Board coordinates and shape geometry belong to domain functions. A seeded/random
 
 Use ordinary functions and a small state machine, with constructor/factory injection for randomness and time. A framework or event bus would add indirection without a second consumer. Canvas suits the board grid; HTML retains keyboard-operable controls and text status. The tradeoff is that Canvas cells need an accessible textual status beside them.
 
+## Piece services and timing
+
+Domain geometry supplies rotation candidates and a single landing query used by hard drop and ghost. The randomizer owns the seven-bag sequence; hold owns one stored piece identity and per-piece eligibility. The engine owns the grounded timer and resolves gravity, commands and deadlines in one chronological stream. Presentation reads ghost/hold views rather than independently simulating them.
+
 There are no persistent browser data stores or network services. Restart resets game state in memory.
 
 ## Component route
