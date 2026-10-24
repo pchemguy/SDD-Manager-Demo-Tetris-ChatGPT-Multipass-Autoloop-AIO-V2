@@ -85,4 +85,32 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
     - [ ] Milestone 2.4 — Phase review
         - [ ] T-023 — Review, test and report phase 2
             Depends on: delivery milestones 2.1, 2.2, 2.3 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
-            Report: docs/dev/reports/phases/2/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.2.0 under the separately authorized release workflow.
+            Report: docs/dev/reports/phases/2/PHASE-REPORT.md. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.2.0 under the separately authorized release workflow.
+
+## Phase 3 — Penetrator ability
+
+- [ ] Phase 3 — Penetrator ability
+    - [ ] Milestone 3.1 — Safe penetrating placement
+        - [ ] T-024 — Implement deepest legal penetrator landing
+            Scope: src/domain/board.ts, tests/unit. Depends on: T-023.
+            Contract: P01 in SPEC. Outcome/evidence: Enumerate legal current-or-lower placements independently of intervening blockers, including disjoint cavities and no-destination cases.
+        - [ ] T-025 — Implement activation, transit and guarded settlement
+            Scope: src/domain/game.ts, src/app/controller.ts, tests/unit. Depends on: T-024.
+            Contract: P01,P02 in SPEC. Outcome/evidence: Apply activation and bonus spend, transit bounds, candidate rejection, disabled hold and timing/lock guard while preserving settled cells.
+        - [ ] T-026 — Review, test and report milestone 3.1
+            Depends on: T-024, T-025. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/3/3.1.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 3.2 — Rewards and visible ability state
+        - [ ] T-027 — Implement bonus rewards and inventory lifecycle
+            Scope: src/domain/game.ts, tests/unit. Depends on: T-026.
+            Contract: P02 in SPEC. Outcome/evidence: Award one per four-line clear capped at three, reset on restart, and preserve ordinary spawn/held behavior.
+        - [ ] T-028 — Integrate penetrator visuals and browser acceptance
+            Scope: src/ui, tests/browser, README.md, RELEASE-NOTES.md. Depends on: T-027.
+            Contract: P03,P01,P02 in SPEC. Outcome/evidence: Render entirely white active mode and projected outline, ordinary settled colors and 0–3 accessible glyph inventory; verify deepest ghost/drop agreement in both browsers.
+        - [ ] T-029 — Review, test and report milestone 3.2
+            Depends on: T-027, T-028. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/3/3.2.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 3.3 — Phase review
+        - [ ] T-030 — Review, test and report phase 3
+            Depends on: delivery milestones 3.1, 3.2 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
+            Report: docs/dev/reports/phases/3/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.3.0 under the separately authorized release workflow.
