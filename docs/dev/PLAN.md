@@ -8,6 +8,7 @@ Deliver a usable classic game first, then bounded capabilities on its integrated
 | --- | --- | --- | --- |
 | 1 — Playable classic baseline | B01–B05, Q01 | v0.1.0 | None |
 | 2 — Modern piece control | E01–E05, G01 | v0.2.0 | Phase 1 verified, integrated and published |
+| 3 — Penetrator ability | P01–P03 | v0.3.0 | Phase 2 verified, integrated and published |
 
 ## Phase 1 — Playable classic baseline
 
@@ -59,7 +60,27 @@ Exit: verify included contracts, relevant prior regressions and integrated compo
 
 ### Milestone 2.4 — Phase review
 
-Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/2/PHASE-REPORT.md`. When this completes the full intended task list, also aggregate unresolved/deferred TODOs with provenance and options in `docs/dev/reports/IMPLEMENTATION-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.2.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
+Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/2/PHASE-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.2.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
+
+## Phase 3 — Penetrator ability
+
+Outcome: A bonus-funded ability traverses stacks without invalid settlement; configuration is excluded.
+
+### Milestone 3.1 — Safe penetrating placement
+
+Traversal and canonical landing agree without overwriting settled cells.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/3/3.1.md`.
+
+### Milestone 3.2 — Rewards and visible ability state
+
+Bonus awards and white mode are understandable through real gameplay.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/3/3.2.md`. Demonstrate the changed controls and state transitions; use failures or unclear feedback to inform continue/amend/simplify/stop decisions within the authorized range.
+
+### Milestone 3.3 — Phase review
+
+Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/3/PHASE-REPORT.md`. When this completes the full intended task list, also aggregate unresolved/deferred TODOs with provenance and options in `docs/dev/reports/IMPLEMENTATION-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.3.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
 
 ## Scope and count rationale
 
@@ -67,12 +88,14 @@ Phase 1 has three delivery milestones: pure placement, integrated playable loop 
 
 Modern gameplay has three delivery milestones: fair supply/rotation, piece tools and grounded timing. Conditional visibility belongs to the existing ghost outcome, avoiding a tiny independent phase.
 
+The ability phase has two delivery milestones: safe traversal/locking and rewards/presentation. Both are substantive integration boundaries; splitting them merely to reach a preferred count would scatter one ability lifecycle.
+
 Dedicated phase review milestones and report-only tasks are excluded from delivery counts. A complete task list is derived in [TASKS](TASKS.md) after physical ownership is established in [layout](layout.md).
 
 ## Verification, risks and release boundaries
 
-Require isolated Chromium and Playwright-managed Firefox evidence through the central [browser policy](../../BROWSER_DEV_POLICY.md), deterministic engine checks, TypeScript/build gates and static distribution verification. Browser provisioning is an early risk gate; missing required capability blocks dependent acceptance rather than silently shrinking coverage. Check screenshots for Canvas, not just DOM text. No browser execution is claimed during planning.
+Require isolated Chromium and Playwright-managed Firefox evidence through the central [browser policy](../../BROWSER_DEV_POLICY.md), deterministic engine checks, TypeScript/build gates and static distribution verification. Browser provisioning is an early risk gate; missing required capability blocks dependent acceptance rather than silently shrinking coverage. Check screenshots for Canvas, not just DOM text.
 
 Every delivery milestone ends with explicit code review/testing/report work. Required defects and contract violations are repaired before closure; only eligible non-critical code TODOs may be deferred with impact, rationale, options and ownership. Final phase review depends on all delivery milestone closures and contains one task; it does not depend on its own milestone closing first.
 
-A phase's release uses finalized root `RELEASE-NOTES.md`, version metadata and a tag on verified default-branch source. Publish after phase integration, not after documentation authoring. Implementation scope and phase activation remain separately authorized operations.
+A phase's release uses finalized root `RELEASE-NOTES.md`, version metadata and a tag on verified default-branch source. Publish after phase integration, not after documentation authoring.
