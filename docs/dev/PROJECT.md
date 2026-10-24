@@ -10,7 +10,8 @@ Provide a responsive single-player browser Tetris game for desktop keyboard user
 - Hold, a ghost landing preview, seven-bag randomization, SRS wall kicks, hard drop and grounded lock delay.
 - Ghost visibility that hides the whole projection if any projected cell is above the board midline.
 - A bonus-funded penetrator ability that passes through settled cells, uses a valid deepest landing preview and renders the active piece white; inventory is capped at three bonuses.
-- A side panel for ghost visibility, hard drop, next preview, hard-drop locking, general locking and hold, with immediate session-only settings.
+- A side panel for ghost visibility, hard drop, next preview, hard-drop locking, general locking and hold, with immediate settings.
+- Independent cookie and URL configuration for every setting, with URL-over-cookie-over-default resolution and synchronized writes.
 
 ## Goals and constraints
 
@@ -19,6 +20,8 @@ Use TypeScript, a pure game engine, a Canvas board and ordinary HTML controls. K
 Verify browser behavior in dedicated, isolated Chromium and Firefox environments under the root [browser development policy](../../BROWSER_DEV_POLICY.md). Use keyboard-operable controls, visible focus and readable instructions.
 
 An activated penetrator cannot be held. Settled cells remain intact while it traverses them; locking must never overlap them. Hard drop and ghost must use the same deepest legal destination.
+
+Resolve each setting independently from a valid explicit URL value, then a valid saved cookie, then its default. Store explicit valid URL values even when equal to defaults, preserve omitted saved values, and synchronize both sources when a player changes a control.
 
 ## Non-goals
 
