@@ -44,4 +44,45 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
     - [ ] Milestone 1.4 — Phase review
         - [ ] T-012 — Review, test and report phase 1
             Depends on: delivery milestones 1.1, 1.2, 1.3 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
-            Report: docs/dev/reports/phases/1/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.1.0 under the separately authorized release workflow.
+            Report: docs/dev/reports/phases/1/PHASE-REPORT.md. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.1.0 under the separately authorized release workflow.
+
+## Phase 2 — Modern piece control
+
+- [ ] Phase 2 — Modern piece control
+    - [ ] Milestone 2.1 — Fair supply and wall kicks
+        - [ ] T-013 — Implement seven-bag piece supply
+            Scope: src/domain/randomizer.ts, src/domain/game.ts, tests/unit. Depends on: T-012.
+            Contract: E01 in SPEC. Outcome/evidence: Replace independent sampling with an injected seven-bag queue; verify complete bags, boundaries and deterministic sequence.
+        - [ ] T-014 — Implement ordered SRS rotation candidates
+            Scope: src/domain/pieces.ts, src/domain/board.ts, tests/unit. Depends on: T-013.
+            Contract: E02 in SPEC. Outcome/evidence: Implement explicit I and JLSTZ kick tables, directed transitions and first-legal selection with expected fixtures for each transition.
+        - [ ] T-015 — Review, test and report milestone 2.1
+            Depends on: T-013, T-014. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/2/2.1.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 2.2 — Hold and landing tools
+        - [ ] T-016 — Implement hold lifecycle and visible held identity
+            Scope: src/domain/game.ts, src/ui/panel.ts, tests/unit, tests/browser. Depends on: T-015.
+            Contract: E03 in SPEC. Outcome/evidence: Add once-per-piece hold, empty/swap queue semantics, spawn reset and collision game-over behavior; present held identity.
+        - [ ] T-017 — Implement canonical landing and ghost projection
+            Scope: src/domain/board.ts, src/ui/render.ts, tests/unit, tests/browser. Depends on: T-016.
+            Contract: E04 in SPEC. Outcome/evidence: Implement one shared ordinary landing query and ghost view; verify projected cells, coincidence and no state mutation.
+        - [ ] T-018 — Implement hard-drop command integration
+            Scope: src/domain/game.ts, src/app/controller.ts, tests/unit, tests/browser. Depends on: T-017.
+            Contract: E04 in SPEC. Outcome/evidence: Wire Space to canonical landing and selected default locking behavior without points; reject key-repeat triggers.
+        - [ ] T-019 — Review, test and report milestone 2.2
+            Depends on: T-016, T-017, T-018. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/2/2.2.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 2.3 — Grounded timing and integrated usability
+        - [ ] T-020 — Implement grounded interval locking
+            Scope: src/domain/game.ts, tests/unit. Depends on: T-019.
+            Contract: E05 in SPEC. Outcome/evidence: Implement full-interval contact deadline, motion retention, airborne cancellation and chronological expiry; verify hard-drop and blur interactions.
+        - [ ] T-021 — Verify and document integrated modern gameplay
+            Scope: tests/browser, src/ui, README.md, RELEASE-NOTES.md. Depends on: T-020.
+            Contract: E01–E05 in SPEC. Outcome/evidence: Run modern-control and classic regression scenarios in both browsers; inspect ghost/hold screenshots and document controls, policy and release inputs.
+        - [ ] T-022 — Review, test and report milestone 2.3
+            Depends on: T-020, T-021. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/2/2.3.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 2.4 — Phase review
+        - [ ] T-023 — Review, test and report phase 2
+            Depends on: delivery milestones 2.1, 2.2, 2.3 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
+            Report: docs/dev/reports/phases/2/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.2.0 under the separately authorized release workflow.
