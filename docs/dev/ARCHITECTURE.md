@@ -22,6 +22,8 @@ Use ordinary functions and a small state machine, with constructor/factory injec
 
 Domain geometry supplies rotation candidates and a single landing query used by hard drop and ghost. The randomizer owns the seven-bag sequence; hold owns one stored piece identity and per-piece eligibility. The engine owns the grounded timer and resolves gravity, commands and deadlines in one chronological stream. Presentation reads ghost/hold views rather than independently simulating them.
 
+Ghost visibility is a presentation projection over the domain landing result. Hiding the ghost never changes movement, locking or the landing query.
+
 There are no persistent browser data stores or network services. Restart resets game state in memory.
 
 ## Component route
