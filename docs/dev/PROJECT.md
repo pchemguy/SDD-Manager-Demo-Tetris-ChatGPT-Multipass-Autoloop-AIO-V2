@@ -2,26 +2,23 @@
 
 ## Purpose and users
 
-Provide a small, playable browser Tetris game for a single player using a desktop keyboard. The intended outcome is a responsive, understandable game that can run as a static website without an account or backend.
+Provide a responsive single-player browser Tetris game for desktop keyboard users. Run as a static website without an account or backend. Clearly explain controls and expose the game's current score and state.
 
-## Scope
+## Intended capabilities
 
-- A 10-column by 20-row board and the seven standard tetrominoes.
-- Falling pieces, horizontal movement, rotation and player-controlled downward movement.
-- Automatic gravity, collision-safe placement and clearing completed horizontal lines.
-- Line-based scoring, visible score, game-over detection and restart.
-- A clearly rendered board and concise keyboard instructions.
+- A 10×20 board, seven tetrominoes, movement, rotation, soft drop, fixed gravity, line clearing, line-based scoring, game over and restart.
+- Hold, a ghost landing preview, seven-bag randomization, SRS wall kicks, hard drop and grounded lock delay.
 
 ## Goals and constraints
 
-Use TypeScript, a pure game engine, a Canvas board and ordinary HTML controls. Keep the game rules independent of browser rendering so deterministic tests can exercise gameplay. Use fixed gravity and simple scoring; avoid additional progression systems.
+Use TypeScript, a pure game engine, a Canvas board and ordinary HTML controls. Keep rules independent of browser APIs so deterministic tests can exercise gameplay. Fixed gravity and simple scoring keep the game focused on placement.
 
-Verify browser behavior in dedicated, isolated Chromium and Firefox environments under the root [browser development policy](../../BROWSER_DEV_POLICY.md). The game must remain usable with keyboard controls, visible focus and readable instructions.
+Verify browser behavior in dedicated, isolated Chromium and Firefox environments under the root [browser development policy](../../BROWSER_DEV_POLICY.md). Use keyboard-operable controls, visible focus and readable instructions.
 
 ## Non-goals
 
-Hold, ghost, next-piece preview, hard drop, wall kicks, bag randomization, special abilities and configurable settings are outside this scope. Also excluded are multiplayer, accounts, network services, touch controls and saved game progress.
+Multiplayer, accounts, backend leaderboards, touch controls, progressive speed levels and saved game progress are excluded.
 
-## Decisions
+## Decision boundaries
 
-There are no unresolved principal-scope decisions. Detailed controls, scoring values, rotation rules and acceptance scenarios belong to the specification. The first playable version is planned as v0.1.0; a release represents verified, integrated implementation rather than document preparation.
+Detailed behavior and acceptance belong to [SPEC](SPEC.md). Structural rationale belongs to [ARCHITECTURE](ARCHITECTURE.md). The first playable release is planned as v0.1.0; releases describe verified integrated implementation.
