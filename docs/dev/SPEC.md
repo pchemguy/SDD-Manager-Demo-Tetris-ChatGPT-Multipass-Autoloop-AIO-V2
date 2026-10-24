@@ -54,7 +54,7 @@ Acceptance: Test zero through four simultaneous rows, row-order preservation, si
 
 Owner: C-INPUT/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Show board, active piece, score, game-over status, keyboard instructions and a native restart button. Use distinct non-white regular-piece colors and consistent settled-cell identities. Canvas scales without changing logical geometry. Suppress gameplay-key browser defaults only when game surface has focus; never hijack form/button shortcuts. On blur/hidden page suspend game time and clear held input; resume with a fresh browser timestamp, preserving remaining game deadlines. Dispose removes listeners and frame ownership.
+Show board, active piece, score, game-over status, keyboard instructions and a native restart button. Make the game surface keyboard focusable and label its purpose. Use distinct non-white regular-piece colors and consistent settled-cell identities. Canvas scales without changing logical geometry. Suppress gameplay-key browser defaults only when game surface has focus; never hijack form/button shortcuts. On blur/hidden page suspend game time and clear held input; resume with a fresh browser timestamp, preserving remaining game deadlines. Dispose removes listeners and frame ownership.
 
 Acceptance: In Chromium and Firefox, exercise actual keyboard/focus, visible output/screenshots, blur/time suspension, restart and listener teardown. Core game runs without a backend.
 
@@ -93,7 +93,7 @@ Offsets below are already in board coordinates (positive y down); do not invert 
 
 Owner: C-PIECE/C-ENGINE in [DECOMPOSITION](DECOMPOSITION.md).
 
-C or Shift holds at most once per active-piece lifecycle. Empty hold stores the current identity and consumes the next queue piece; occupied hold swaps without drawing from the queue. A held piece returns in spawn orientation/position with fresh gravity and grounded state. Hold becomes available after lock; a colliding replacement spawn ends the game.
+C or Shift holds at most once per active-piece lifecycle, subject to the penetrator restriction in P02. Empty hold stores the current identity and consumes the next queue piece; occupied hold swaps without drawing from the queue. A held piece returns in spawn orientation/position with fresh gravity and grounded state. Hold becomes available after lock; a colliding replacement spawn ends the game.
 
 Acceptance: Verify empty/occupied hold, repeated rejected hold, queue consumption, orientation reset and replacement spawn collision.
 
@@ -121,9 +121,33 @@ Numbered board rows 0…9 are upper half and 10…19 lower half. With dynamic gh
 
 Acceptance: Test min landing y=9/10, a piece straddling rows 9/10, and movement/rotation causing hide/show in both directions; hiding does not affect hard drop.
 
+## P01 — Activation, traversal and legal landing
+
+Owner: C-ENGINE/C-BOARD/C-PIECE in [DECOMPOSITION](DECOMPOSITION.md).
+
+P activates only for a running ordinary piece when inventory>0; spend one bonus atomically and set active mode penetrator. Repeated activation, repeat keydown and unavailable activation do nothing. Recompute grounded state on activation; a newly deeper destination cancels the old grounded deadline as airborne. Reject hold without resetting that deadline. Traversal ignores settled occupancy but respects board bounds; never destroy settled cells. For its current column/orientation and current-or-lower top-left y, enumerate all fully in-bounds, non-overlapping placements and select the deepest. Gravity and soft drop advance toward that destination, passing through occupied intermediate positions; that destination defines grounded state. Hard drop and ghost use it directly. Lateral/rotation candidates may overlap intermediate settled cells only if they have a legal current-or-lower landing. Reject a candidate without one. If a required landing/lock operation has no valid candidate, end the game without modifying settled cells.
+
+Acceptance: Fixtures include an upper blocker with a deeper cavity, multiple disjoint valid rows, bottom obstruction, overlapping transit, rejected no-destination lateral/rotation, and no-landing terminal failure. Assert deepest legal candidate and no overwritten cells.
+
+## P02 — Penetrator hold, lock and rewards
+
+Owner: C-ENGINE/C-PIECE in [DECOMPOSITION](DECOMPOSITION.md).
+
+Disable hold while penetrator mode is active, without consuming hold eligibility or queue entries. Lock uses the selected ordinary timing policy at the penetrator landing and rechecks full bounds/no overlap. Mode ends at lock; spawn/hold replacements are ordinary. A four-line clear awards one bonus after settlement, saturating at three; other clears award none. Restart clears inventory. Settled penetrator cells retain their tetromino identity and ordinary palette.
+
+Acceptance: Verify disabled hold, one spend per activation, delay/immediate policy interactions, post-lock mode reset, rewards at 0/2/3 bonuses and restart reset.
+
+## P03 — Penetrator presentation
+
+Owner: C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
+
+Render every cell and border of the active penetrator entirely white; active ordinary and settled pieces never use white. Render a visible penetrator ghost as a white outline. Side panel shows exactly one lightning glyph per available bonus, with an accessible numeric label even at zero. Update on every award/spend and restart.
+
+Acceptance: Inspect screenshots for white active mode and ordinary settled colors; verify accessible count and 0–3 glyph updates after earn/spend.
+
 ## Q01 — Verification and distribution
 
-The runtime must be deployable as static assets with no backend. A clean locked dependency installation, TypeScript check, production build and deterministic engine tests form the local build gate. Browser acceptance targets isolated Chromium headless shell and Playwright-managed Firefox, using the compatible locked runner and [BROWSER_DEV_POLICY](../../BROWSER_DEV_POLICY.md). Establish actual launch, interaction, rendering/screenshot and teardown capability before dependent tests. No browser installation or execution is claimed by this specification.
+The runtime must be deployable as static assets with no backend. A clean locked dependency installation, TypeScript check, production build and deterministic engine tests form the local build gate. Browser acceptance targets isolated Chromium headless shell and Playwright-managed Firefox, using the compatible locked runner and [BROWSER_DEV_POLICY](../../BROWSER_DEV_POLICY.md). Establish actual launch, interaction, rendering/screenshot and teardown capability before dependent tests.
 
 Test actual application/server input and render paths, inspect screenshots and verify score/state text; DOM assertions alone cannot certify Canvas output. A test-only fixture seam may inject deterministic engine states into tests without exposing a production debug endpoint. Do not count skipped browser coverage as passed. User-facing controls require labels, visible focus, readable text and keyboard access; Canvas is accompanied by status text rather than a promise of full screen-reader board navigation.
 
