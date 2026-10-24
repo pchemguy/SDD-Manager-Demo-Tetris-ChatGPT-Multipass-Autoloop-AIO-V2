@@ -9,6 +9,7 @@ Deliver a usable classic game first, then bounded capabilities on its integrated
 | 1 — Playable classic baseline | B01–B05, Q01 | v0.1.0 | None |
 | 2 — Modern piece control | E01–E05, G01 | v0.2.0 | Phase 1 verified, integrated and published |
 | 3 — Penetrator ability | P01–P03 | v0.3.0 | Phase 2 verified, integrated and published |
+| 4 — Session game configuration | C01–C02 | v0.4.0 | Phase 3 verified, integrated and published |
 
 ## Phase 1 — Playable classic baseline
 
@@ -80,7 +81,27 @@ Exit: verify included contracts, relevant prior regressions and integrated compo
 
 ### Milestone 3.3 — Phase review
 
-Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/3/PHASE-REPORT.md`. When this completes the full intended task list, also aggregate unresolved/deferred TODOs with provenance and options in `docs/dev/reports/IMPLEMENTATION-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.3.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
+Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/3/PHASE-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.3.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
+
+## Phase 4 — Session game configuration
+
+Outcome: Players can select six settings live and see the next piece; reload starts with defaults and persistence is excluded.
+
+### Milestone 4.1 — Validated settings and panel
+
+Six native controls and a non-consuming next preview expose selected values.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/4/4.1.md`.
+
+### Milestone 4.2 — Live policy transitions
+
+Immediate choices preserve gameplay state and defined timer behavior.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/4/4.2.md`. Demonstrate the changed controls and state transitions; use failures or unclear feedback to inform continue/amend/simplify/stop decisions within the authorized range.
+
+### Milestone 4.3 — Phase review
+
+Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/4/PHASE-REPORT.md`. When this completes the full intended task list, also aggregate unresolved/deferred TODOs with provenance and options in `docs/dev/reports/IMPLEMENTATION-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.4.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
 
 ## Scope and count rationale
 
@@ -89,6 +110,8 @@ Phase 1 has three delivery milestones: pure placement, integrated playable loop 
 Modern gameplay has three delivery milestones: fair supply/rotation, piece tools and grounded timing. Conditional visibility belongs to the existing ghost outcome, avoiding a tiny independent phase.
 
 The ability phase has two delivery milestones: safe traversal/locking and rewards/presentation. Both are substantive integration boundaries; splitting them merely to reach a preferred count would scatter one ability lifecycle.
+
+Configuration has two delivery milestones: normalized controls/preview and live rule transitions. Separate timing-risk evidence justifies the split; additional milestones would mostly be form fields.
 
 Dedicated phase review milestones and report-only tasks are excluded from delivery counts. A complete task list is derived in [TASKS](TASKS.md) after physical ownership is established in [layout](layout.md).
 
