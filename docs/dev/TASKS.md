@@ -65,7 +65,7 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
             Contract: E03 in SPEC. Outcome/evidence: Add once-per-piece hold, empty/swap queue semantics, spawn reset and collision game-over behavior; present held identity.
         - [ ] T-017 — Implement canonical landing and ghost projection
             Scope: src/domain/board.ts, src/ui/render.ts, tests/unit, tests/browser. Depends on: T-016.
-            Contract: E04,G01 in SPEC. Outcome/evidence: Implement one shared ordinary landing query and ghost view; verify projected cells, coincidence and no state mutation. Apply the min projected y=10 boundary and straddling hide/show cases.
+            Contract: E04,G01 in SPEC. Outcome/evidence: Implement one shared ordinary landing query and ghost view; verify projected cells, including coincidence with the active piece, without an extra visibility suppression or state mutation. Apply the min projected y=10 boundary and straddling hide/show cases.
         - [ ] T-018 — Implement hard-drop command integration
             Scope: src/domain/game.ts, src/app/controller.ts, tests/unit, tests/browser. Depends on: T-017.
             Contract: E04 in SPEC. Outcome/evidence: Wire Space to canonical landing and selected default locking behavior without points; reject key-repeat triggers.
@@ -134,7 +134,7 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
             Contract: C02 in SPEC. Outcome/evidence: Apply toggle rejection, preserved hold, ghost policy and explicit hard-drop/general-lock transitions with same-value no-reset behavior.
         - [ ] T-035 — Verify session configuration and document controls
             Scope: tests/browser, README.md, RELEASE-NOTES.md. Depends on: T-034.
-            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, mid-fall/grounded changes, disabled shortcuts, restart retention and unpersisted model defaults before persistence adapters are composed in both browsers. Phase 5 supplies durable restore, and final regressions use its persisted expectations.
+            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, including coincident ghost visibility, mid-fall/grounded changes, disabled shortcuts, restart retention and unpersisted model defaults before persistence adapters are composed in both browsers. Phase 5 supplies durable restore, and final regressions use its persisted expectations.
         - [ ] T-036 — Review, test and report milestone 4.2
             Depends on: T-034, T-035. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
             Report: docs/dev/reports/phases/4/4.2.md. Publish evidence and close constituent issues before milestone closure.

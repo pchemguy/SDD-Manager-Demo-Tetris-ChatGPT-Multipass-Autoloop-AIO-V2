@@ -36,10 +36,10 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | DOCS-002 | Pass 6; PROJECT.md blob `af83cfe41305dbf9b0bec39537b8cf923d1ee277`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-003 | Pass 6; ARCHITECTURE.md blob `0d2b0d91d0a452732847310adf73041d048d8576`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-004 | Pass 6; DECOMPOSITION.md blob `de9546942983309d3721df642c516e269d5b53a9`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
-| DOCS-005 | Pass 6; SPEC.md blob `6da6963318a62a14ddd365e64929e2f301c06624`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: SPEC-REVIEW-REPORT.md; Ready within its stated scope. |
+| DOCS-005 | Pass 6; current SPEC.md blob `6719ba9f983c94b2e56b5f91237e1da7c728818b`. First approval/preapproval remains complete at the preceding published boundary 1150c2f1619cbe83314eb5ef3ca3ccdd6928df78. Scoped GHOST-001 correction and affected QC rechecks are recorded in adjacent reports; no task reopening or new scope. |
 | DOCS-006 | Pass 6; PLAN.md blob `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-007 | Pass 6; layout.md blob `6453dd372df661e573b0422ca78fe76b2d6646cc`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-008 | Pass 6; TASKS.md blob `53baa84a7e18ab33836198550a3d629ba6583fcf`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: TASKS-REVIEW-REPORT.md; Ready within its stated scope. |
+| DOCS-008 | Pass 6; current TASKS.md blob `2e43d91a86315a20c8697b74f8f71d55ce36cdbf`. First approval/preapproval remains complete at the preceding published boundary 1150c2f1619cbe83314eb5ef3ca3ccdd6928df78. Scoped GHOST-001 correction and affected QC rechecks are recorded in adjacent reports; no task reopening or new scope. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
 
 ## Initialization and current reset
@@ -54,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-DOCS-008 completion publication and issue #8 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
+Publish/read back the scoped GHOST-001 correction and attach evidence to the existing closed issue #5. All six passes have completed DOCS-008. DOCS-009 and the documentation milestone remain open; stop before package QC, integration and implementation.

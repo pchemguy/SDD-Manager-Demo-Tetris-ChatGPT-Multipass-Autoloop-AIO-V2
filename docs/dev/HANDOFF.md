@@ -19,4 +19,4 @@ The human approved the initial PROJECT proposal and six-pass sequence on 2026-10
 
 ## Pending work and next action
 
-Publish/read back the DOCS-008 completion and close/read back issue #8. Then stop: DOCS-009 and sdd-docs-main remain open; no package-QC report or implementation objects are created.
+DOCS-008 completion and issue #8 closure were verified at 1150c2f1619cbe83314eb5ef3ca3ccdd6928df78. Publish/read back the scoped GHOST-001 correction and attach issue #5 evidence, then stop: DOCS-009 and sdd-docs-main remain open; no package-QC report or implementation objects are created.

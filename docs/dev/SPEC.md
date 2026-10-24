@@ -101,9 +101,9 @@ Acceptance: Verify empty/occupied hold, repeated rejected hold, queue consumptio
 
 Owner: C-BOARD/C-PIECE/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01 and C01; suppress a coincident ghost under the active piece to avoid obscuring it. Hard drop awards no points. Unless C02 selects immediate hard-drop locking, it uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
+Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01 and C01; Apply no additional visibility suppression when the projected cells coincide with the active piece. Hard drop awards no points. Unless C02 selects immediate hard-drop locking, it uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
 
-Acceptance: Assert hard-drop and ghost cell equality on empty and irregular stacks, no tunneled ordinary drop, no board mutation by projection, and timing-policy behavior.
+Acceptance: Assert hard-drop and ghost cell equality on empty and irregular stacks, no tunneled ordinary drop, no board mutation by projection, visibility at coincident destinations, and timing-policy behavior.
 
 ## E05 — Full-interval grounded lock delay
 
@@ -149,9 +149,9 @@ Acceptance: Inspect screenshots for white active mode and ordinary settled color
 
 Owner: C-SETTINGS/C-INPUT/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Use six native labeled controls: ghost hidden/dynamic/shown (default dynamic), hardDrop true/false (true), next true/false (true), hardDropLock general/immediate (general), lock failed/interval (interval), hold true/false (true). Show one next piece in spawn orientation without consuming supply. Invalid in-memory settings changes are rejected without state mutation. In hidden ghost mode show no ghost; in shown mode apply no midline restriction; coincident ghost suppression still applies.
+Use six native labeled controls: ghost hidden/dynamic/shown (default dynamic), hardDrop true/false (true), next true/false (true), hardDropLock general/immediate (general), lock failed/interval (interval), hold true/false (true). Show one next piece in spawn orientation without consuming supply. Invalid in-memory settings changes are rejected without state mutation. In hidden ghost mode show no ghost; in shown mode apply no midline restriction; Coincidence with the active piece introduces no additional hiding condition.
 
-Acceptance: Check all control options, defaults, keyboard form operation, next queue identity/no consumption, hidden/shown/dynamic differences and invalid change rejection.
+Acceptance: Check all control options, defaults, keyboard form operation, next queue identity/no consumption, hidden/shown/dynamic differences including coincident destinations, and invalid change rejection.
 
 ## C02 — Live settings transition
 

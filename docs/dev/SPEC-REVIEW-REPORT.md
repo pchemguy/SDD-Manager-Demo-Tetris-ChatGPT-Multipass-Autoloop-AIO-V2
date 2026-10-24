@@ -4,7 +4,7 @@
 
 State: **Ready**, limited to design conformance; Ready for PLAN. Active documentation scope: 6. No unresolved confirmed findings. Exact reviewed/governing blobs:
 
-- `SPEC.md`: `6da6963318a62a14ddd365e64929e2f301c06624`.
+- `SPEC.md`: `6719ba9f983c94b2e56b5f91237e1da7c728818b`.
 - `PROJECT.md`: `af83cfe41305dbf9b0bec39537b8cf923d1ee277`.
 - `ARCHITECTURE.md`: `0d2b0d91d0a452732847310adf73041d048d8576`.
 - `DECOMPOSITION.md`: `de9546942983309d3721df642c516e269d5b53a9`.
@@ -146,3 +146,31 @@ Checks: owner conformance assessment, requirement/strategy coverage, boundary an
 | S01 | C-CONFIG/C-SETTINGS | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
 | S02 | C-CONFIG/C-INPUT | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
 | Q01 | Controller/view and distribution | Locked static build, isolated dual-browser and Canvas evidence are planned acceptance, not executed results. |
+
+## Revision 7
+
+2026-10-24; spec owner recheck after scope/input changes. Rechecked the active scope against accepted governing inputs; prior-state findings remain historical. Reviewed blobs: SPEC.md `6719ba9f983c94b2e56b5f91237e1da7c728818b`, PROJECT.md `af83cfe41305dbf9b0bec39537b8cf923d1ee277`, ARCHITECTURE.md `0d2b0d91d0a452732847310adf73041d048d8576`, DECOMPOSITION.md `de9546942983309d3721df642c516e269d5b53a9`. No confirmed new findings; current gate Ready within the stated scope.
+
+| Contracts | Design owners | Assessment |
+| --- | --- | --- |
+| B01 | C-BOARD/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B02 | C-BOARD/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B03 | C-ENGINE/C-INPUT | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B04 | C-ENGINE/C-BOARD | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B05 | C-INPUT/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E01 | C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E02 | C-BOARD/C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E03 | C-PIECE/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E04 | C-BOARD/C-PIECE/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E05 | C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| G01 | C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| P01 | C-ENGINE/C-BOARD/C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| P02 | C-ENGINE/C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| P03 | C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| C01 | C-SETTINGS/C-INPUT/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| C02 | C-SETTINGS/C-INPUT/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| S01 | C-CONFIG/C-SETTINGS | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| S02 | C-CONFIG/C-INPUT | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| Q01 | Controller/view and distribution | Locked static build, isolated dual-browser and Canvas evidence are planned acceptance, not executed results. |
+
+Finding **GHOST-001**, resolved: SPEC E04/C01 contained an extra coincidence-hiding condition, inconsistent with the selected visibility policy. The specification owner removed both conditions; the task owner clarified T-017/T-035 acceptance. Recheck: hidden always hides; dynamic shows exactly when all projected cells have y≥10; shown has no positional restriction. Coincidence adds no hidden exception. Component boundaries, phase/milestone scope, task IDs/dependencies and layout remain unchanged. Current source identities are listed in this revision. No runtime or whole-package QC is claimed.
