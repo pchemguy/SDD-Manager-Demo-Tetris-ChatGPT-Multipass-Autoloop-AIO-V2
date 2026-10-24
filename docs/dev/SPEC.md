@@ -161,6 +161,22 @@ Apply a validated user change before the next input/frame render, without restar
 
 Acceptance: Exercise each toggle mid-fall/grounded/game-over, lock-policy changes at 999 ms, same-value no-reset, disabled keyboard actions and form-focus isolation. Session-only settings reset on reload.
 
+## S01 — Independent persisted restore
+
+Owner: C-CONFIG/C-SETTINGS in [DECOMPOSITION](DECOMPOSITION.md).
+
+Use query/cookie keys ghost, hardDrop, next, hardDropLock, lock, hold, with exact case-sensitive values from C01; booleans serialize as 1 or 0. Parse URLSearchParams using its first occurrence for duplicate keys. Independently choose a valid URL value, else valid decoded cookie, else default. Empty, unknown, malformed or out-of-range values are invalid; invalid higher-precedence sources fall through. For duplicate matching cookies use the first occurrence. Ignore unrelated keys. A valid explicit URL value is saved to its cookie even when equal to default; absent/invalid URL values do not overwrite cookies. Restore before initial game/render.
+
+Acceptance: Use mixed sources across all six fields, default-equal URL values, omitted/empty/invalid/duplicate parameters, malformed cookies, mixed casing and unrelated parameters. Reload and new page in the same browser context restore expected values.
+
+## S02 — Persist selection and URL synchronization
+
+Owner: C-CONFIG/C-INPUT in [DECOMPOSITION](DECOMPOSITION.md).
+
+Each accepted setting update, including an explicit same-value update, writes only that setting cookie and uses history.replaceState to set one canonical query parameter while preserving other settings, unrelated parameters and fragment. Cookies use Path=/, SameSite=Lax, Max-Age=31536000 and Secure on HTTPS; encode values. Do not serialize board, score, hold inventory or RNG. URL startup cookie writes do not inject omitted parameters or defaults into URL. A selection is applied in memory even if cookie or history access fails; attempt stores independently and show a non-blocking persistence status without exposing raw errors. Check the selected cookie value by immediate readback when accessible, so silent cookie refusal produces the same non-blocking status. Browser storage restrictions limit durability but never prevent play.
+
+Acceptance: Check all six settings on change, explicit-default writes, retained unrelated query/fragment, no unrelated cookie reset, cookie attributes, reload precedence and separate cookie/history failure injection plus browser reload evidence.
+
 ## Q01 — Verification and distribution
 
 The runtime must be deployable as static assets with no backend. A clean locked dependency installation, TypeScript check, production build and deterministic engine tests form the local build gate. Browser acceptance targets isolated Chromium headless shell and Playwright-managed Firefox, using the compatible locked runner and [BROWSER_DEV_POLICY](../../BROWSER_DEV_POLICY.md). Establish actual launch, interaction, rendering/screenshot and teardown capability before dependent tests.

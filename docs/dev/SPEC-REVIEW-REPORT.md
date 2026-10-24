@@ -2,12 +2,12 @@
 
 ## Current gate
 
-State: **Ready**, limited to design conformance; Ready for PLAN. Active documentation scope: 5. No unresolved confirmed findings. Exact reviewed/governing blobs:
+State: **Ready**, limited to design conformance; Ready for PLAN. Active documentation scope: 6. No unresolved confirmed findings. Exact reviewed/governing blobs:
 
-- `SPEC.md`: `deed71e9e93ec93061e699b49a2b86f74ea19aaa`.
-- `PROJECT.md`: `dff613734007f8157de09649dccdceee893a8fdd`.
-- `ARCHITECTURE.md`: `ef9382f50d02187842e194747f0d3427e9767333`.
-- `DECOMPOSITION.md`: `b54472b27b5ceb1031914fdf2a04906b73be5cec`.
+- `SPEC.md`: `6da6963318a62a14ddd365e64929e2f301c06624`.
+- `PROJECT.md`: `af83cfe41305dbf9b0bec39537b8cf923d1ee277`.
+- `ARCHITECTURE.md`: `0d2b0d91d0a452732847310adf73041d048d8576`.
+- `DECOMPOSITION.md`: `de9546942983309d3721df642c516e269d5b53a9`.
 
 Checks: owner conformance assessment, requirement/strategy coverage, boundary and dependency review, Markdown/link checks, and count assessment below. No application tests, browser execution, whole-package QC or implementation acceptance were performed.
 
@@ -119,4 +119,30 @@ Checks: owner conformance assessment, requirement/strategy coverage, boundary an
 | P03 | C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
 | C01 | C-SETTINGS/C-INPUT/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
 | C02 | C-SETTINGS/C-INPUT/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| Q01 | Controller/view and distribution | Locked static build, isolated dual-browser and Canvas evidence are planned acceptance, not executed results. |
+
+## Revision 6
+
+2026-10-24; spec owner recheck after scope/input changes. Rechecked the active scope against accepted governing inputs; prior-state findings remain historical. Reviewed blobs: SPEC.md `6da6963318a62a14ddd365e64929e2f301c06624`, PROJECT.md `af83cfe41305dbf9b0bec39537b8cf923d1ee277`, ARCHITECTURE.md `0d2b0d91d0a452732847310adf73041d048d8576`, DECOMPOSITION.md `de9546942983309d3721df642c516e269d5b53a9`. No confirmed new findings; current gate Ready within the stated scope.
+
+| Contracts | Design owners | Assessment |
+| --- | --- | --- |
+| B01 | C-BOARD/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B02 | C-BOARD/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B03 | C-ENGINE/C-INPUT | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B04 | C-ENGINE/C-BOARD | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| B05 | C-INPUT/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E01 | C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E02 | C-BOARD/C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E03 | C-PIECE/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E04 | C-BOARD/C-PIECE/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| E05 | C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| G01 | C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| P01 | C-ENGINE/C-BOARD/C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| P02 | C-ENGINE/C-PIECE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| P03 | C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| C01 | C-SETTINGS/C-INPUT/C-VIEW | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| C02 | C-SETTINGS/C-INPUT/C-ENGINE | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| S01 | C-CONFIG/C-SETTINGS | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
+| S02 | C-CONFIG/C-INPUT | Success, rejection/boundary and acceptance reviewed; coherent ownership. |
 | Q01 | Controller/view and distribution | Locked static build, isolated dual-browser and Canvas evidence are planned acceptance, not executed results. |
