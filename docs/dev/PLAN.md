@@ -7,6 +7,7 @@ Deliver a usable classic game first, then bounded capabilities on its integrated
 | Phase | Capability / included contracts | Planned release | Prerequisite |
 | --- | --- | --- | --- |
 | 1 — Playable classic baseline | B01–B05, Q01 | v0.1.0 | None |
+| 2 — Modern piece control | E01–E05 | v0.2.0 | Phase 1 verified, integrated and published |
 
 ## Phase 1 — Playable classic baseline
 
@@ -32,11 +33,39 @@ Exit: verify included contracts, relevant prior regressions and integrated compo
 
 ### Milestone 1.4 — Phase review
 
-Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/1/PHASE-REPORT.md`. When this completes the full intended task list, also aggregate unresolved/deferred TODOs with provenance and options in `docs/dev/reports/IMPLEMENTATION-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.1.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
+Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/1/PHASE-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.1.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
+
+## Phase 2 — Modern piece control
+
+Outcome: Preserve the classic game while adding fair supply, forgiving rotation, piece tools and full-interval locking; penetration/settings are excluded.
+
+### Milestone 2.1 — Fair supply and wall kicks
+
+Seeded bags and SRS preserve valid board placement.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/2/2.1.md`.
+
+### Milestone 2.2 — Hold and landing tools
+
+Hold, ghost and hard drop share the active lifecycle and canonical landing.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/2/2.2.md`.
+
+### Milestone 2.3 — Grounded timing and integrated usability
+
+All modern controls operate consistently under full-interval locking.
+
+Exit: verify included contracts, relevant prior regressions and integrated component behavior; complete milestone code review, repair blockers, run focused checks and retain `docs/dev/reports/phases/2/2.3.md`. Demonstrate the changed controls and state transitions; use failures or unclear feedback to inform continue/amend/simplify/stop decisions within the authorized range.
+
+### Milestone 2.4 — Phase review
+
+Exactly one phase code review/testing/report outcome follows completion and, when enabled, closure of all delivery milestones. Verify phase-specific exits, preserved behavior, reports and deferred TODOs in `docs/dev/reports/phases/2/PHASE-REPORT.md`. When this completes the full intended task list, also aggregate unresolved/deferred TODOs with provenance and options in `docs/dev/reports/IMPLEMENTATION-REPORT.md`. After phase verification, explicitly integrate into the default branch, recheck merged state and publish/read back before tagging v0.2.0 and publishing its GitHub release. Finalize version/release notes against the actual delivered source. No subsequent phase starts before this boundary.
 
 ## Scope and count rationale
 
 Phase 1 has three delivery milestones: pure placement, integrated playable loop and verified distribution. The last is narrow (browser acceptance, packaging and instructions) because it provides independent reproducibility evidence for release.
+
+Modern gameplay has three delivery milestones: fair supply/rotation, piece tools and grounded timing.
 
 Dedicated phase review milestones and report-only tasks are excluded from delivery counts. A complete task list is derived in [TASKS](TASKS.md) after physical ownership is established in [layout](layout.md).
 
