@@ -10,6 +10,7 @@
 | C-VIEW | Canvas and HTML view | Own drawing and semantic status; consume state without mutation. | render(snapshot); restart intent. | Screenshots and status assertions in target browsers. |
 | C-PIECE | Piece supply and manipulation | Own seven-bag queue, SRS candidates, hold eligibility and canonical landing projection. | Engine queries pure geometry and supply; snapshot exposes derived ghost and hold. | Seeded bags, ordered kick fixtures, hold/drop projection tests. |
 | C-SETTINGS | Validated settings model | Own allowlisted schema, defaults, parsing and value validation; no browser side effects. | resolve candidate values; immutable normalized settings. | Field-by-field valid/invalid inputs and live transition cases. |
+| C-CONFIG | Cookie and URL adapter | Own reading, independent source resolution and best-effort writes to browser configuration stores. | loadSettings, saveSetting; consumes C-SETTINGS validators. | Real cookies/history, reload and blocked-storage tests. |
 
 ## Collaboration and lifecycle
 
@@ -22,6 +23,8 @@ C-PIECE contributes supply/geometry/hold functions, while C-ENGINE owns active-p
 Penetrator traversal and legal landing calculations belong to C-BOARD/C-PIECE. C-ENGINE owns activation, bonus accounting and a final no-overlap lock check; C-VIEW owns white rendering and inventory glyphs. No overlay can erase C-BOARD cells.
 
 C-SETTINGS validates changes before C-INPUT updates the controller snapshot. C-ENGINE receives only gameplay-policy values and applies any timing transition atomically; C-VIEW receives visibility/availability values. Settings focus prevents game input from consuming form keys. Restart preserves settings but clears game state.
+
+C-CONFIG loads before game creation, saves valid explicit URL selections, and persists individual later control changes. It depends on C-SETTINGS, never the reverse. Each store can fail independently; failures are caught at the adapter and surfaced as non-blocking status.
 
 ## Contract owner
 
