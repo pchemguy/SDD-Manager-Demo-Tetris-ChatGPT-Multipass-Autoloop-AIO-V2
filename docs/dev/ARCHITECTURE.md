@@ -32,7 +32,7 @@ An active-piece mode selects ordinary or penetrator traversal within the same ge
 
 A typed settings model supplies validated values and defaults. The controller owns the current settings snapshot; it applies feature flags to commands, supplies rule-policy changes to the engine, and gives visibility preferences to presentation. Disabled controls do not clear held pieces, queues or bonuses. Native HTML form focus is isolated from gameplay input handling.
 
-There are no persistent browser data stores or network services. Settings live only in the controller for the current page.
+A browser configuration adapter reads cookies and URLSearchParams into the settings model, resolves each field independently, and writes selected values through cookie and history APIs. Domain code has no cookie, URL or storage dependency. Browser storage errors leave in-memory play available and expose a non-blocking status; failed persistence cannot roll back an already selected setting. Only six allowlisted keys are parsed or written; query input is never HTML.
 
 ## Component route
 
