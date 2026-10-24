@@ -32,8 +32,8 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 | Task | Current evidence / decision basis |
 | --- | --- |
-| DOCS-001 | All four original root files preserved byte for byte; default provenance seed and main merge verified. Initialization committed with task checkoff and HANDOFF; its publication/issue closure require readback. |
-| DOCS-002 | Pass 1 brief pending publication and first human approval. |
+| DOCS-001 | All four original root files preserved byte for byte; default provenance seed and main merge verified. Initialization 8ca36e912d2f58b64a7f0969e71e02e774e6b5e2 published with exact ref readback; issue #1 closed/read back as completed. |
+| DOCS-002 | Pass 1 PROJECT proposed, blob `12ccc4615300ab245ad6fb14446784ee39740e6a`; first human approval pending. Reviewed against the accepted baseline, brief/content boundaries and root browser policy; no principal-scope gaps. README disclosure/usage links verified. |
 | DOCS-003–008 | Not started; dependent on first PROJECT approval. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
 
@@ -49,4 +49,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-Initialization publication and DOCS-001 issue closure require confirmation before PROJECT publication. First PROJECT approval remains pending. Resolve later effects using exact Git and provider readback before replaying them.
+PROJECT proposal publication requires readback; after that, first PROJECT approval is the next boundary. DOCS-002 stays unchecked and issue #2 stays open. Do not author ARCHITECTURE until acceptance; then execute all six predefined passes under the recorded mode.
