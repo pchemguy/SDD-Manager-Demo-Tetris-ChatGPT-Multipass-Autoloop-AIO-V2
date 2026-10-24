@@ -24,6 +24,10 @@ Domain geometry supplies rotation candidates and a single landing query used by 
 
 Ghost visibility is a presentation projection over the domain landing result. Hiding the ghost never changes movement, locking or the landing query.
 
+## Penetrator policy
+
+An active-piece mode selects ordinary or penetrator traversal within the same geometry/landing boundary. Both modes share board storage and the atomic lock guard. Traversal permission never grants permission to overwrite settled cells. The engine owns bonus inventory and activation consumption; view code owns only the corresponding symbols and white active-piece style. Settled cells keep their piece identity palette after lock.
+
 There are no persistent browser data stores or network services. Restart resets game state in memory.
 
 ## Component route
