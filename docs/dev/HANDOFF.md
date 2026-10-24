@@ -1,6 +1,6 @@
 # Project handoff
 
-Checkpoint: main documentation, scope 1, completed document pass; next predefined reset. Recover subsequent effects from Git and the owning records; this snapshot is not a live cursor.
+Checkpoint: main documentation, scope 2, reset to next scope. Recover subsequent effects from Git and the owning records; this snapshot is not a live cursor.
 
 ## Workflow and sources
 
@@ -19,4 +19,4 @@ The human approved the initial PROJECT proposal and six-pass sequence on 2026-10
 
 ## Pending work and next action
 
-Publish/read back the DOCS-008 completion and close/read back issue #8. Then reset for the next predefined scope without another approval pause.
+Publish/read back the reset and reopen/read back the same DOCS-002–009 issues before revising PROJECT. Prior document bytes remain retained inputs; prior approvals do not complete the new scope.
