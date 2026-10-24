@@ -3,7 +3,7 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 4; current document DOCS-006; next DOCS-007.
+- Current pass: 4; current document DOCS-007; next DOCS-008.
 - Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
 - Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
 - Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
@@ -38,7 +38,7 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | DOCS-004 | Pass 4; DECOMPOSITION.md blob `5d874c98dc0cc5c42dccb6922694193668096497`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-005 | Pass 4; SPEC.md blob `fcb76ba96cf762cff9bdcc39baf29b0dafc73fdb`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: SPEC-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-006 | Pass 4; PLAN.md blob `0e0d75a285173fdd91aa8da1ea6e5a2ea8df0607`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-007 | Scope 4 pending; prior-scope evidence retained in Git at 75f5c81a08da7501476e6db3ff631d2d1baa1830. |
+| DOCS-007 | Pass 4; layout.md blob `e4c3e47fcb70ce06a4beaf30527c6e01fa9c6376`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-008 | Scope 4 pending; prior-scope evidence retained in Git at 75f5c81a08da7501476e6db3ff631d2d1baa1830. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
 
@@ -54,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-DOCS-006 completion publication and issue #6 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
+DOCS-007 completion publication and issue #7 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
