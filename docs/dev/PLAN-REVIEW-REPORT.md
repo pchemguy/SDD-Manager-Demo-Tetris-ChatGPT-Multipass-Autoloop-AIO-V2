@@ -2,9 +2,10 @@
 
 ## Current gate
 
-State: **Ready**, limited to strategy only; layout review is still required before TASKS. Active documentation scope: 6. No unresolved confirmed findings. Exact reviewed/governing blobs:
+State: **Ready**, limited to combined strategy/layout; Ready for TASKS. Active documentation scope: 6. No unresolved confirmed findings. Exact reviewed/governing blobs:
 
 - `PLAN.md`: `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`.
+- `layout.md`: `6453dd372df661e573b0422ca78fe76b2d6646cc`.
 - `SPEC.md`: `6da6963318a62a14ddd365e64929e2f301c06624`.
 - `ARCHITECTURE.md`: `0d2b0d91d0a452732847310adf73041d048d8576`.
 - `DECOMPOSITION.md`: `de9546942983309d3721df642c516e269d5b53a9`.
@@ -138,3 +139,17 @@ Confirmed a minimal playable Phase 1, explicit prior-phase dependencies, milesto
 | 5: S01–S02 | 2 | 5.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
 
 Confirmed a minimal playable Phase 1, explicit prior-phase dependencies, milestone review exits, single-task final phase review and phase-specific release gates. Physical placement remains pending; this strategy gate does not authorize TASKS.
+
+## Revision 11
+
+2026-10-24; plan owner recheck after scope/input changes. Combined layout assessment; no strategy scope changed. Reviewed blobs: PLAN.md `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`, layout.md `6453dd372df661e573b0422ca78fe76b2d6646cc`, SPEC.md `6da6963318a62a14ddd365e64929e2f301c06624`, ARCHITECTURE.md `0d2b0d91d0a452732847310adf73041d048d8576`, DECOMPOSITION.md `de9546942983309d3721df642c516e269d5b53a9`. No confirmed new findings; current gate Ready within the stated scope.
+
+| Phase | Delivery milestones | Excluded phase-review milestone | Scope/count assessment |
+| --- | --- | --- | --- |
+| 1: B01–B05, Q01 | 3 | 1.4 (one) | Three cohesive boundaries establish a usable game before distribution. |
+| 2: E01–E05, G01 | 3 | 2.4 (one) | Three bounded piece-control outcomes preserve baseline play. |
+| 3: P01–P03 | 2 | 3.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
+| 4: C01–C02 | 2 | 4.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
+| 5: S01–S02 | 2 | 5.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
+
+Confirmed a minimal playable Phase 1, explicit prior-phase dependencies, milestone review exits, single-task final phase review and phase-specific release gates. Physical paths cover every component, test seam, static packaging and generated artifact owner; no domain-to-browser dependency.
