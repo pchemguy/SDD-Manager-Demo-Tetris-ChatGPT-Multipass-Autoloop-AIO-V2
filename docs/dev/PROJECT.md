@@ -8,6 +8,7 @@ Provide a responsive single-player browser Tetris game for desktop keyboard user
 
 - A 10×20 board, seven tetrominoes, movement, rotation, soft drop, fixed gravity, line clearing, line-based scoring, game over and restart.
 - Hold, a ghost landing preview, seven-bag randomization, SRS wall kicks, hard drop and grounded lock delay.
+- Ghost visibility that hides the whole projection if any projected cell is above the board midline.
 
 ## Goals and constraints
 
