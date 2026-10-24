@@ -18,6 +18,8 @@ No component reads a browser clock implicitly. Randomness is supplied explicitly
 
 C-PIECE contributes supply/geometry/hold functions, while C-ENGINE owns active-piece mode and temporal state. The same landing result feeds hard drop and C-VIEW, preventing two competing collision implementations.
 
+Penetrator traversal and legal landing calculations belong to C-BOARD/C-PIECE. C-ENGINE owns activation, bonus accounting and a final no-overlap lock check; C-VIEW owns white rendering and inventory glyphs. No overlay can erase C-BOARD cells.
+
 ## Contract owner
 
 [SPEC](SPEC.md) defines command outcomes, geometry, timing, invalid-input handling and objective acceptance. There are no additional component children: current responsibilities fit this entry without duplicating contracts.
