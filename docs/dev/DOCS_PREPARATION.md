@@ -3,7 +3,7 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 4; current document DOCS-008; next authorized next-pass reset.
+- Current pass: 5; cursor DOCS-002; next predefined cumulative scope selected.
 - Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
 - Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
 - Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
@@ -33,13 +33,13 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | Task | Current evidence / decision basis |
 | --- | --- |
 | DOCS-001 | All four original root files preserved byte for byte; default provenance seed and main merge verified. Initialization 8ca36e912d2f58b64a7f0969e71e02e774e6b5e2 published with exact ref readback; issue #1 closed/read back as completed. |
-| DOCS-002 | Pass 4; PROJECT.md blob `00339242136fdc505ea673aafd88a8705dc1a42d`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
-| DOCS-003 | Pass 4; ARCHITECTURE.md blob `d21f696324d6e35e20f3e845013558edaa77cf21`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
-| DOCS-004 | Pass 4; DECOMPOSITION.md blob `5d874c98dc0cc5c42dccb6922694193668096497`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
-| DOCS-005 | Pass 4; SPEC.md blob `fcb76ba96cf762cff9bdcc39baf29b0dafc73fdb`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: SPEC-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-006 | Pass 4; PLAN.md blob `0e0d75a285173fdd91aa8da1ea6e5a2ea8df0607`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-007 | Pass 4; layout.md blob `e4c3e47fcb70ce06a4beaf30527c6e01fa9c6376`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-008 | Pass 4; TASKS.md blob `1b8e03ff776fec9dc9c1c75146f66586375ef5de`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: TASKS-REVIEW-REPORT.md; Ready within its stated scope. |
+| DOCS-002 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
+| DOCS-003 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
+| DOCS-004 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
+| DOCS-005 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
+| DOCS-006 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
+| DOCS-007 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
+| DOCS-008 | Scope 5 pending; prior-scope evidence retained in Git at 4764f3732c2cfa61b763a69b97251480435bf580. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
 
 ## Initialization and current reset
@@ -50,8 +50,8 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 - Tracking: enabled by root AGENTS.md. Native sdd-docs-main milestone and all nine exact standard issue definitions and associations read back before target writes; DOCS-001–009 map to issues #1–9. Complete enumeration covered open and closed objects.
 - Manual provenance: default enabled; two exact packaged scaffold files, no transcript. Base 909a7789bd9292ab53c50d5cb57a47b343577c07; published seed 7a78377e8ae3f522309b3080bd60341450f71b2c; published explicit two-parent main merge 44a20193b5ec94090d041d20649057f2958b4e46. Retain design-docs/ai-logs for manual logs.
 - Credential handling: ignored, untracked conventional repository credential established after full projection readback. No credential contents enter project evidence.
-- Current reset: from scope 3 at 75f5c81a08da7501476e6db3ff631d2d1baa1830 to scope 4; authorized by the accepted predefined sequence. Retained product files are revision inputs; DOCS-002–009 reopened locally.
+- Current reset: from scope 4 at 4764f3732c2cfa61b763a69b97251480435bf580 to scope 5; authorized by the accepted predefined sequence. Retained product files are revision inputs; DOCS-002–009 reopened locally.
 
 ## Pending transitions
 
-DOCS-008 completion publication and issue #8 closure require confirmation. Recover actual subsequent effects by exact readback before replay. Next: authorized reset to the next predefined scope.
+Publish/read back this reset, then reopen/read back issues #2–9 with reset evidence before revising PROJECT. Milestone must remain open. No implementation authorized.
