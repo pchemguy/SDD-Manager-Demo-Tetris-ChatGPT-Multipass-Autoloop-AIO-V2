@@ -1,22 +1,22 @@
 # Project handoff
 
-Checkpoint: main documentation initialization, DOCS-001. Product documents are not yet accepted.
+Checkpoint: main documentation, scope 1, completed document pass; next predefined reset. Recover subsequent effects from Git and the owning records; this snapshot is not a live cursor.
 
 ## Workflow and sources
 
-SDD Manager main development, autodoc/autoloop preparation; coordinator sdd-manage. [DOCS_TASKS](DOCS_TASKS.md) owns task checkoffs and [DOCS_PREPARATION](DOCS_PREPARATION.md) owns six scope passes, approved exploration decisions and evidence. Use bundled `.agents/plugins/sdd-manager` version 0.15.2 and root instructions. Linux execution host; browser setup is not required for document-only work.
+SDD Manager autodoc/autoloop under sdd-manage; [DOCS_TASKS](DOCS_TASKS.md) owns checkoffs, [DOCS_PREPARATION](DOCS_PREPARATION.md) owns scope, decisions, exact document identities and pending effects. Current [PROJECT](PROJECT.md), [ARCHITECTURE](ARCHITECTURE.md), [DECOMPOSITION](DECOMPOSITION.md), [SPEC](SPEC.md), [PLAN](PLAN.md), [layout](layout.md) and [TASKS](TASKS.md) are the product owners. Adjacent SPEC/PLAN/TASKS review reports contain per-document QC and retained rechecks.
 
-## Scope and human decisions
+## Scope and decisions
 
-Prepare the six predefined cumulative scopes. The human approved the exploration recommendations; first PROJECT acceptance remains pending. Later PROJECT and subsequent document checkpoints are preapproved by autodoc/autoloop. Stop after Pass 6 DOCS-008 before whole-package QC, documentation integration and implementation. Tracking follows root AGENTS.md; reporting Standard. Release publication applies only after subsequently authorized implementation phases.
+The human approved the initial PROJECT proposal and six-pass sequence on 2026-10-24. Later document checkpoints are preapproved; new material decisions are delegated with visible rationale. No implementation range is authorized. Stop after scope 6 DOCS-008 before package QC, documentation integration or implementation. GitHub tracking follows root AGENTS; Standard reporting. Browser testing remains planned, not executed.
 
 ## Branches and return
 
 - Working branch: design-docs/main.
 - Creation parent and eventual integration target: main.
 - Branch-off: 44a20193b5ec94090d041d20649057f2958b4e46.
-- No suspended parent workflow. Manual provenance branch is retained separately.
+- No suspended parent. Retain design-docs/ai-logs separately for manual records.
 
 ## Pending work and next action
 
-Publish/read back this initialization checkpoint, close/read back DOCS-001 issue #1, then publish Pass 1 PROJECT for first human approval. Those later effects are pending as of this checkpoint; recover their actual status from subsequent Git and provider evidence. No implementation range is authorized.
+Publish/read back the DOCS-008 completion and close/read back issue #8. Then reset for the next predefined scope without another approval pause.
