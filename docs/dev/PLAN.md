@@ -12,6 +12,12 @@ Deliver a usable classic game first, then bounded capabilities on its integrated
 | 4 — Session game configuration | C01–C02 | v0.4.0 | Phase 3 verified, integrated and published |
 | 5 — Persistent configuration | S01–S02 | v0.5.0 | Phase 4 verified, integrated and published |
 
+## Phase-specific acceptance
+
+Phase 1 uses SPEC's **Core** profile: independent uniform supply, matrix rotation without kicks and failed-downward locking. Phase 2 requires E01–E05/G01 and retains the other core guarantees; its modern supply, rotation and timing contracts govern their respective completed milestones. Phase 3 includes P01–P03. Phase 4 uses SPEC's **Session configuration** profile alongside all preceding gameplay requirements, including a real page-reload check restoring defaults without cookie/query access. Phase 5 requires S01–S02 and the full persistent product.
+
+Each phase exit tests only its included capability profile and preserved guarantees. Earlier milestones may retain the preceding rule until the task owning the replacement contract is complete; their reports must state that boundary. The full final SPEC does not require undispatched later capabilities to pass an earlier phase, and final regressions must not retain obsolete independent-supply, no-kick, failed-lock-default or reload-reset expectations.
+
 ## Phase 1 — Playable classic baseline
 
 Outcome: A complete keyboard-playable classic game; modern piece tools, penetration and settings are excluded.

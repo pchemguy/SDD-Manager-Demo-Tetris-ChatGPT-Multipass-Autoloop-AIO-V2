@@ -4,10 +4,10 @@
 
 State: **Ready**, limited to PLAN conformance; task derivation Ready, implementation not authorized. Active documentation scope: 6. No unresolved confirmed findings. Exact reviewed/governing blobs:
 
-- `TASKS.md`: `2e43d91a86315a20c8697b74f8f71d55ce36cdbf`.
-- `SPEC.md`: `6719ba9f983c94b2e56b5f91237e1da7c728818b`.
-- `PLAN.md`: `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`.
-- `layout.md`: `6453dd372df661e573b0422ca78fe76b2d6646cc`.
+- `TASKS.md`: `b71d0b2c45f5ee42cc16b6f2b21400f348d8b4de`.
+- `SPEC.md`: `8ca988bba193b82e339cac98496d8f43b9495cbe`.
+- `PLAN.md`: `b224335a45ed88a8e539c25a38297d589805eb2b`.
+- `layout.md`: `4f1ab04040084dbedcc8407526f7e60887b39c3a`.
 - `DECOMPOSITION.md`: `de9546942983309d3721df642c516e269d5b53a9`.
 
 Checks: owner conformance assessment, requirement/strategy coverage, boundary and dependency review, Markdown/link checks, and count assessment below. No application tests, browser execution, whole-package QC or implementation acceptance were performed.
@@ -168,3 +168,31 @@ Unique monotonic IDs, exact PLAN parent names, four-space hierarchy, acyclic pri
 Unique monotonic IDs, exact PLAN parent names, four-space hierarchy, acyclic prior-ID prerequisites, contract coverage and owned paths checked. All implementation checkboxes remain unchecked. Milestone/phase code review and test/report work is explicit; final review carries full-list report/TODO aggregation.
 
 Finding **GHOST-001**, resolved: SPEC E04/C01 contained an extra coincidence-hiding condition, inconsistent with the selected visibility policy. The specification owner removed both conditions; the task owner clarified T-017/T-035 acceptance. Recheck: hidden always hides; dynamic shows exactly when all projected cells have y≥10; shown has no positional restriction. Coincidence adds no hidden exception. Component boundaries, phase/milestone scope, task IDs/dependencies and layout remain unchanged. Current source identities are listed in this revision. No runtime or whole-package QC is claimed.
+
+## Revision 8
+
+2026-10-24; tasks owner recheck after scope/input changes. Rechecked the active scope against accepted governing inputs; prior-state findings remain historical. Reviewed blobs: TASKS.md `b71d0b2c45f5ee42cc16b6f2b21400f348d8b4de`, SPEC.md `8ca988bba193b82e339cac98496d8f43b9495cbe`, PLAN.md `b224335a45ed88a8e539c25a38297d589805eb2b`, layout.md `4f1ab04040084dbedcc8407526f7e60887b39c3a`, DECOMPOSITION.md `de9546942983309d3721df642c516e269d5b53a9`. No confirmed new findings; current gate Ready within the stated scope.
+
+| Milestone | Delivery tasks | Excluded review task | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 3 | T-004 | Cohesive bounded work with explicit dependencies and direct acceptance. |
+| 1.2 | 3 | T-008 | Cohesive bounded work with explicit dependencies and direct acceptance. |
+| 1.3 | 2 | T-011 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 1.4 | 0 (dedicated phase review) | T-012 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 2.1 | 2 | T-015 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 2.2 | 3 | T-019 | Cohesive bounded work with explicit dependencies and direct acceptance. |
+| 2.3 | 2 | T-022 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 2.4 | 0 (dedicated phase review) | T-023 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 3.1 | 2 | T-026 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 3.2 | 2 | T-029 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 3.3 | 0 (dedicated phase review) | T-030 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 4.1 | 2 | T-033 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 4.2 | 2 | T-036 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 4.3 | 0 (dedicated phase review) | T-037 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 5.1 | 2 | T-040 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 5.2 | 2 | T-043 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 5.3 | 0 (dedicated phase review) | T-044 | Intentional single review task; depends on all delivery milestones, not itself. |
+
+Unique monotonic IDs, exact PLAN parent names, four-space hierarchy, acyclic prior-ID prerequisites, contract coverage and owned paths checked. All implementation checkboxes remain unchecked. Milestone/phase code review and test/report work is explicit; final review carries full-list report/TODO aggregation.
+
+Package-QC correction/recheck: QC-003 (actual session-profile reload coverage), with QC-002 profile traceability resolved. Current product and input blobs above identify the repaired state. Final persistent restore and early delivery acceptance are distinct, with no added product capability; dependencies, 44 stable task IDs, five phase boundaries and review units are retained. The brief explicitly qualifies dynamic ghost behavior. No browser/build execution is claimed.

@@ -1,13 +1,13 @@
 # Implementation tasks
 
-All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.md) owns phase/milestone scope and exits, and [layout](layout.md) owns physical paths. IDs are stable and project-wide; review tasks are executable work within a selected range. Every delivery task includes relevant tests and documentation, and implementation uses the task commit/publication contract in root instructions.
+All implementation work is pending. Phase acceptance uses the Core and Session configuration profiles in SPEC and the phase mapping in PLAN; full-product contracts apply at their owning delivery boundary. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.md) owns phase/milestone scope and exits, and [layout](layout.md) owns physical paths. IDs are stable and project-wide; review tasks are executable work within a selected range. Every delivery task includes relevant tests and documentation, and implementation uses the task commit/publication contract in root instructions.
 
 ## Phase 1 — Playable classic baseline
 
 - [ ] Phase 1 — Playable classic baseline
     - [ ] Milestone 1.1 — Deterministic placement foundation
         - [ ] T-001 — Establish the isolated build and test environment
-            Scope: package.json, package-lock.json, tsconfig.json, vite.config.ts, playwright.config.ts. Depends on: none.
+            Scope: .gitignore, package.json, package-lock.json, tsconfig.json, vite.config.ts, playwright.config.ts. Depends on: none.
             Contract: B01,Q01 in SPEC. Outcome/evidence: Create locked TypeScript/Vite/Vitest/Playwright tooling and build commands; provision and exercise both required isolated browsers following the central policy. Retain actual runner/binary versions, installation/interaction/teardown evidence and limitations. Do not close if required provisioning remains blocked.
         - [ ] T-002 — Define board geometry and tetromino masks
             Scope: src/domain/board.ts, src/domain/pieces.ts, tests/unit. Depends on: T-001.
@@ -134,7 +134,7 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
             Contract: C02 in SPEC. Outcome/evidence: Apply toggle rejection, preserved hold, ghost policy and explicit hard-drop/general-lock transitions with same-value no-reset behavior.
         - [ ] T-035 — Verify session configuration and document controls
             Scope: tests/browser, README.md, RELEASE-NOTES.md. Depends on: T-034.
-            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, including coincident ghost visibility, mid-fall/grounded changes, disabled shortcuts, restart retention and unpersisted model defaults before persistence adapters are composed in both browsers. Phase 5 supplies durable restore, and final regressions use its persisted expectations.
+            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, including coincident ghost visibility, mid-fall/grounded changes, disabled shortcuts and restart retention in both browsers. For the session configuration profile, verify an actual reload restores defaults and configuration cookies/query parameters are neither consumed nor written. Phase 5 supplies durable restore; full-product regressions use S01/S02 instead of a reload-reset expectation.
         - [ ] T-036 — Review, test and report milestone 4.2
             Depends on: T-034, T-035. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
             Report: docs/dev/reports/phases/4/4.2.md. Publish evidence and close constituent issues before milestone closure.

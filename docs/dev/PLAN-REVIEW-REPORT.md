@@ -4,9 +4,9 @@
 
 State: **Ready**, limited to combined strategy/layout; Ready for TASKS. Active documentation scope: 6. No unresolved confirmed findings. Exact reviewed/governing blobs:
 
-- `PLAN.md`: `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`.
-- `layout.md`: `6453dd372df661e573b0422ca78fe76b2d6646cc`.
-- `SPEC.md`: `6719ba9f983c94b2e56b5f91237e1da7c728818b`.
+- `PLAN.md`: `b224335a45ed88a8e539c25a38297d589805eb2b`.
+- `layout.md`: `4f1ab04040084dbedcc8407526f7e60887b39c3a`.
+- `SPEC.md`: `8ca988bba193b82e339cac98496d8f43b9495cbe`.
 - `ARCHITECTURE.md`: `0d2b0d91d0a452732847310adf73041d048d8576`.
 - `DECOMPOSITION.md`: `de9546942983309d3721df642c516e269d5b53a9`.
 
@@ -169,3 +169,19 @@ Confirmed a minimal playable Phase 1, explicit prior-phase dependencies, milesto
 Confirmed a minimal playable Phase 1, explicit prior-phase dependencies, milestone review exits, single-task final phase review and phase-specific release gates. Physical paths cover every component, test seam, static packaging and generated artifact owner; no domain-to-browser dependency.
 
 Finding **GHOST-001**, resolved: SPEC E04/C01 contained an extra coincidence-hiding condition, inconsistent with the selected visibility policy. The specification owner removed both conditions; the task owner clarified T-017/T-035 acceptance. Recheck: hidden always hides; dynamic shows exactly when all projected cells have y≥10; shown has no positional restriction. Coincidence adds no hidden exception. Component boundaries, phase/milestone scope, task IDs/dependencies and layout remain unchanged. Current source identities are listed in this revision. No runtime or whole-package QC is claimed.
+
+## Revision 13
+
+2026-10-24; plan owner recheck after scope/input changes. Combined layout assessment; no strategy scope changed. Reviewed blobs: PLAN.md `b224335a45ed88a8e539c25a38297d589805eb2b`, layout.md `4f1ab04040084dbedcc8407526f7e60887b39c3a`, SPEC.md `8ca988bba193b82e339cac98496d8f43b9495cbe`, ARCHITECTURE.md `0d2b0d91d0a452732847310adf73041d048d8576`, DECOMPOSITION.md `de9546942983309d3721df642c516e269d5b53a9`. No confirmed new findings; current gate Ready within the stated scope.
+
+| Phase | Delivery milestones | Excluded phase-review milestone | Scope/count assessment |
+| --- | --- | --- | --- |
+| 1: B01–B05, Q01 | 3 | 1.4 (one) | Three cohesive boundaries establish a usable game before distribution. |
+| 2: E01–E05, G01 | 3 | 2.4 (one) | Three bounded piece-control outcomes preserve baseline play. |
+| 3: P01–P03 | 2 | 3.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
+| 4: C01–C02 | 2 | 4.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
+| 5: S01–S02 | 2 | 5.3 (one) | Two retained boundaries each expose independent integration risk; adding a third would fragment one narrow capability. |
+
+Confirmed a minimal playable Phase 1, explicit prior-phase dependencies, milestone review exits, single-task final phase review and phase-specific release gates. Physical paths cover every component, test seam, static packaging and generated artifact owner; no domain-to-browser dependency.
+
+Package-QC correction/recheck: QC-002 (explicit phase-to-profile mapping) and QC-004 (unambiguous physical paths) resolved. Current product and input blobs above identify the repaired state. Final persistent restore and early delivery acceptance are distinct, with no added product capability; dependencies, 44 stable task IDs, five phase boundaries and review units are retained. The brief explicitly qualifies dynamic ghost behavior. No browser/build execution is claimed.

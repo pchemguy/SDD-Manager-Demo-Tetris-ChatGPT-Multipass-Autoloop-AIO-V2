@@ -101,7 +101,7 @@ Acceptance: Verify empty/occupied hold, repeated rejected hold, queue consumptio
 
 Owner: C-BOARD/C-PIECE/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01 and C01; Apply no additional visibility suppression when the projected cells coincide with the active piece. Hard drop awards no points. Unless C02 selects immediate hard-drop locking, it uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
+Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01 and C01. Apply no additional visibility suppression when the projected cells coincide with the active piece. Hard drop awards no points. Unless C02 selects immediate hard-drop locking, it uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
 
 Acceptance: Assert hard-drop and ghost cell equality on empty and irregular stacks, no tunneled ordinary drop, no board mutation by projection, visibility at coincident destinations, and timing-policy behavior.
 
@@ -149,7 +149,7 @@ Acceptance: Inspect screenshots for white active mode and ordinary settled color
 
 Owner: C-SETTINGS/C-INPUT/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Use six native labeled controls: ghost hidden/dynamic/shown (default dynamic), hardDrop true/false (true), next true/false (true), hardDropLock general/immediate (general), lock failed/interval (interval), hold true/false (true). Show one next piece in spawn orientation without consuming supply. Invalid in-memory settings changes are rejected without state mutation. In hidden ghost mode show no ghost; in shown mode apply no midline restriction; Coincidence with the active piece introduces no additional hiding condition.
+Use six native labeled controls: ghost hidden/dynamic/shown (default dynamic), hardDrop true/false (true), next true/false (true), hardDropLock general/immediate (general), lock failed/interval (interval), hold true/false (true). Show one next piece in spawn orientation without consuming supply. Invalid in-memory settings changes are rejected without state mutation. In hidden ghost mode show no ghost; in shown mode apply no midline restriction. Coincidence with the active piece introduces no additional hiding condition.
 
 Acceptance: Check all control options, defaults, keyboard form operation, next queue identity/no consumption, hidden/shown/dynamic differences including coincident destinations, and invalid change rejection.
 
@@ -159,7 +159,7 @@ Owner: C-SETTINGS/C-INPUT/C-ENGINE in [DECOMPOSITION](DECOMPOSITION.md).
 
 Apply a validated user change before the next input/frame render, without restarting game. Disabling hard drop or hold rejects its action without spending/consuming state; retain held identity for re-enable. Visibility changes redraw immediately. Hard-drop immediate locks a valid hard-drop destination in the same command; follow-general obeys selected lock mode. Changing general lock policy cancels the old grounded deadline; if newly interval and grounded, start a fresh full interval; if failed, wait for the next failed downward attempt. Same-value changes do not reset timers. Changing hard-drop policy alone does not retroactively lock an already dropped piece. Settings and held state survive feature toggles; restart clears held/game state but retains selected settings.
 
-Acceptance: Exercise each toggle mid-fall/grounded/game-over, lock-policy changes at 999 ms, same-value no-reset, disabled keyboard actions and form-focus isolation. Session-only settings reset on reload.
+Acceptance: Exercise each toggle mid-fall/grounded/game-over, lock-policy changes at 999 ms, same-value no-reset, disabled keyboard actions and form-focus isolation. Reload and new-page restoration follow S01/S02 for the full product; the session configuration profile below defines the non-persistent delivery subset.
 
 ## S01 — Independent persisted restore
 
@@ -182,6 +182,17 @@ Acceptance: Check all six settings on change, explicit-default writes, retained 
 The runtime must be deployable as static assets with no backend. A clean locked dependency installation, TypeScript check, production build and deterministic engine tests form the local build gate. Browser acceptance targets isolated Chromium headless shell and Playwright-managed Firefox, using the compatible locked runner and [BROWSER_DEV_POLICY](../../BROWSER_DEV_POLICY.md). Establish actual launch, interaction, rendering/screenshot and teardown capability before dependent tests.
 
 Test actual application/server input and render paths, inspect screenshots and verify score/state text; DOM assertions alone cannot certify Canvas output. A test-only fixture seam may inject deterministic engine states into tests without exposing a production debug endpoint. Do not count skipped browser coverage as passed. User-facing controls require labels, visible focus, readable text and keyboard access; Canvas is accompanied by status text rather than a promise of full screen-reader board navigation.
+
+## Delivery acceptance profiles
+
+The full product satisfies every requirement above. Two bounded acceptance profiles define behavior for independently verified delivery subsets; they are implementation targets, not player-selectable feature switches.
+
+| Profile | Required behavior and explicit exclusions |
+| --- | --- |
+| Core | B01–B05 and Q01 with independent, uniformly sampled piece identities; matrix rotation rejects invalid placement without kick offsets; failed gravity/soft-drop attempts lock. E01–E05, G01, penetrators and configuration are excluded from this subset. |
+| Session configuration | C01–C02 with the included gameplay requirements; settings begin at defaults on each page load, remain selected through restart, and neither read nor write configuration cookies or query parameters. S01–S02 are excluded from this subset. |
+
+All other delivered subsets apply their included requirements and preserve the earlier playable path. The full product uses E01/E02/E05 for bag supply, SRS and default interval locking, and S01/S02 for persistent restore. [PLAN](PLAN.md) selects each delivery subset and its exit coverage; these profiles do not weaken final-product acceptance.
 
 ## Scope exclusions
 

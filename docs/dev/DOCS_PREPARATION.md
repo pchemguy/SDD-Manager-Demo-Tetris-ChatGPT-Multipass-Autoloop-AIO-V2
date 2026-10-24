@@ -3,10 +3,10 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 6; current document DOCS-008; next final autodoc stop before DOCS-009.
-- Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
+- Current pass: 6 complete; DOCS-009 whole-package QC passed under the human "complete QC" advance on 2026-10-24.
+- Authority: the six cumulative passes are complete. The human advanced to whole-package QC, bounded repairs and standard published documentation integration/milestone closure. No implementation is authorized.
 - Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
-- Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
+- Current stopping boundary: complete package QC and the standard verified documentation integration/milestone closure; stop before implementation. The human advanced beyond the prior autodoc stop on 2026-10-24.
 - Reporting: Standard.
 
 ## Scope sequence
@@ -33,19 +33,19 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | Task | Current evidence / decision basis |
 | --- | --- |
 | DOCS-001 | All four original root files preserved byte for byte; default provenance seed and main merge verified. Initialization 8ca36e912d2f58b64a7f0969e71e02e774e6b5e2 published with exact ref readback; issue #1 closed/read back as completed. |
-| DOCS-002 | Pass 6; PROJECT.md blob `af83cfe41305dbf9b0bec39537b8cf923d1ee277`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
+| DOCS-002 | Accepted scope 6 retained; current PROJECT.md blob `c61b6c337c589333ba61da8af62a5826d75046b2`. Bounded package-QC clarification under the human advance; affected adjacent reports rechecked. Existing first-approval checkoffs remain complete. |
 | DOCS-003 | Pass 6; ARCHITECTURE.md blob `0d2b0d91d0a452732847310adf73041d048d8576`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-004 | Pass 6; DECOMPOSITION.md blob `de9546942983309d3721df642c516e269d5b53a9`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
-| DOCS-005 | Pass 6; current SPEC.md blob `6719ba9f983c94b2e56b5f91237e1da7c728818b`. First approval/preapproval remains complete at the preceding published boundary 1150c2f1619cbe83314eb5ef3ca3ccdd6928df78. Scoped GHOST-001 correction and affected QC rechecks are recorded in adjacent reports; no task reopening or new scope. |
-| DOCS-006 | Pass 6; PLAN.md blob `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-007 | Pass 6; layout.md blob `6453dd372df661e573b0422ca78fe76b2d6646cc`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-008 | Pass 6; current TASKS.md blob `2e43d91a86315a20c8697b74f8f71d55ce36cdbf`. First approval/preapproval remains complete at the preceding published boundary 1150c2f1619cbe83314eb5ef3ca3ccdd6928df78. Scoped GHOST-001 correction and affected QC rechecks are recorded in adjacent reports; no task reopening or new scope. |
-| DOCS-009 | Not selected; remains open at the autoloop stop. |
+| DOCS-005 | Accepted scope 6 retained; current SPEC.md blob `8ca988bba193b82e339cac98496d8f43b9495cbe`. Bounded package-QC clarification under the human advance; affected adjacent reports rechecked. Existing first-approval checkoffs remain complete. |
+| DOCS-006 | Accepted scope 6 retained; current PLAN.md blob `b224335a45ed88a8e539c25a38297d589805eb2b`. Bounded package-QC clarification under the human advance; affected adjacent reports rechecked. Existing first-approval checkoffs remain complete. |
+| DOCS-007 | Accepted scope 6 retained; current layout.md blob `4f1ab04040084dbedcc8407526f7e60887b39c3a`. Bounded package-QC clarification under the human advance; affected adjacent reports rechecked. Existing first-approval checkoffs remain complete. |
+| DOCS-008 | Accepted scope 6 retained; current TASKS.md blob `b71d0b2c45f5ee42cc16b6f2b21400f348d8b4de`. Bounded package-QC clarification under the human advance; affected adjacent reports rechecked. Existing first-approval checkoffs remain complete. |
+| DOCS-009 | Whole-package QC passed; [DOCS-QC-REPORT](DOCS-QC-REPORT.md) pins repaired root/report identities and resolves QC-001–004. Report, updated evidence, HANDOFF and checked DOCS-009 are co-committed. Publication, issue closure and integration require subsequent readback. |
 
 ## Initialization and current reset
 
 - Original retained files: AI_DISCLOSURE.md, SDD-MANAGER.md, AGENTS.md and SKILL_DISCOVERY_PROTOCOL.md. Copied root files: none. All four were present, so no mixed-initialization pause applies.
-- Preservation: all four worktree blobs match initial commit 909a7789bd9292ab53c50d5cb57a47b343577c07.
+- Preservation: at DOCS-001 all four root blobs matched initial commit 909a7789bd9292ab53c50d5cb57a47b343577c07. AGENTS project navigation was subsequently maintained at the layout checkpoints.
 - Discovery: bundled SDD Manager 0.15.2 and standalone Technical Writing Assistant; root browser policy requires isolated Chromium and Firefox. Linux host; Git, Node and Python available; gh absent.
 - Tracking: enabled by root AGENTS.md. Native sdd-docs-main milestone and all nine exact standard issue definitions and associations read back before target writes; DOCS-001–009 map to issues #1–9. Complete enumeration covered open and closed objects.
 - Manual provenance: default enabled; two exact packaged scaffold files, no transcript. Base 909a7789bd9292ab53c50d5cb57a47b343577c07; published seed 7a78377e8ae3f522309b3080bd60341450f71b2c; published explicit two-parent main merge 44a20193b5ec94090d041d20649057f2958b4e46. Retain design-docs/ai-logs for manual logs.
@@ -54,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-Publish/read back the scoped GHOST-001 correction and attach evidence to the existing closed issue #5. All six passes have completed DOCS-008. DOCS-009 and the documentation milestone remain open; stop before package QC, integration and implementation.
+Publish/read back the DOCS-009 completion and close/read back issue #9; then explicitly merge the complete accepted preparation into actual default main, verify/publish/read back, and close/read back sdd-docs-main. These are pending as of this checkpoint. Stop before implementation; no phase projection or release is selected.
