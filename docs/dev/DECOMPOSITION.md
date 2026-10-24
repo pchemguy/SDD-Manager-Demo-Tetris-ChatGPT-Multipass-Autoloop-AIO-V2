@@ -9,6 +9,7 @@
 | C-INPUT | Input and clock controller | Own listeners and frame time; order intents and prevent browser defaults only for game controls. | Domain commands and elapsed monotonic game time. | Fake clock plus real browser keyboard/focus checks. |
 | C-VIEW | Canvas and HTML view | Own drawing and semantic status; consume state without mutation. | render(snapshot); restart intent. | Screenshots and status assertions in target browsers. |
 | C-PIECE | Piece supply and manipulation | Own seven-bag queue, SRS candidates, hold eligibility and canonical landing projection. | Engine queries pure geometry and supply; snapshot exposes derived ghost and hold. | Seeded bags, ordered kick fixtures, hold/drop projection tests. |
+| C-SETTINGS | Validated settings model | Own allowlisted schema, defaults, parsing and value validation; no browser side effects. | resolve candidate values; immutable normalized settings. | Field-by-field valid/invalid inputs and live transition cases. |
 
 ## Collaboration and lifecycle
 
@@ -19,6 +20,8 @@ No component reads a browser clock implicitly. Randomness is supplied explicitly
 C-PIECE contributes supply/geometry/hold functions, while C-ENGINE owns active-piece mode and temporal state. The same landing result feeds hard drop and C-VIEW, preventing two competing collision implementations.
 
 Penetrator traversal and legal landing calculations belong to C-BOARD/C-PIECE. C-ENGINE owns activation, bonus accounting and a final no-overlap lock check; C-VIEW owns white rendering and inventory glyphs. No overlay can erase C-BOARD cells.
+
+C-SETTINGS validates changes before C-INPUT updates the controller snapshot. C-ENGINE receives only gameplay-policy values and applies any timing transition atomically; C-VIEW receives visibility/availability values. Settings focus prevents game input from consuming form keys. Restart preserves settings but clears game state.
 
 ## Contract owner
 
