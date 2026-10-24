@@ -2,13 +2,13 @@
 
 ## Current gate
 
-State: **Ready**, limited to PLAN conformance; task derivation Ready, implementation not authorized. Active documentation scope: 4. No unresolved confirmed findings. Exact reviewed/governing blobs:
+State: **Ready**, limited to PLAN conformance; task derivation Ready, implementation not authorized. Active documentation scope: 5. No unresolved confirmed findings. Exact reviewed/governing blobs:
 
-- `TASKS.md`: `1b8e03ff776fec9dc9c1c75146f66586375ef5de`.
-- `SPEC.md`: `fcb76ba96cf762cff9bdcc39baf29b0dafc73fdb`.
-- `PLAN.md`: `0e0d75a285173fdd91aa8da1ea6e5a2ea8df0607`.
-- `layout.md`: `e4c3e47fcb70ce06a4beaf30527c6e01fa9c6376`.
-- `DECOMPOSITION.md`: `5d874c98dc0cc5c42dccb6922694193668096497`.
+- `TASKS.md`: `1d0d29c0999d9c0f64ee92bd6402aa6102e6ab5d`.
+- `SPEC.md`: `deed71e9e93ec93061e699b49a2b86f74ea19aaa`.
+- `PLAN.md`: `240b3d60f75afb71608bc5f5ce940176819f4f00`.
+- `layout.md`: `a43c21ae51a7ff6f1f510568876aea3485388c02`.
+- `DECOMPOSITION.md`: `b54472b27b5ceb1031914fdf2a04906b73be5cec`.
 
 Checks: owner conformance assessment, requirement/strategy coverage, boundary and dependency review, Markdown/link checks, and count assessment below. No application tests, browser execution, whole-package QC or implementation acceptance were performed.
 
@@ -89,5 +89,28 @@ Unique monotonic IDs, exact PLAN parent names, four-space hierarchy, acyclic pri
 | 3.1 | 2 | T-026 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
 | 3.2 | 2 | T-029 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
 | 3.3 | 0 (dedicated phase review) | T-030 | Intentional single review task; depends on all delivery milestones, not itself. |
+
+Unique monotonic IDs, exact PLAN parent names, four-space hierarchy, acyclic prior-ID prerequisites, contract coverage and owned paths checked. All implementation checkboxes remain unchecked. Milestone/phase code review and test/report work is explicit; final review carries full-list report/TODO aggregation.
+
+## Revision 5
+
+2026-10-24; tasks owner recheck after scope/input changes. Rechecked the active scope against accepted governing inputs; prior-state findings remain historical. Reviewed blobs: TASKS.md `1d0d29c0999d9c0f64ee92bd6402aa6102e6ab5d`, SPEC.md `deed71e9e93ec93061e699b49a2b86f74ea19aaa`, PLAN.md `240b3d60f75afb71608bc5f5ce940176819f4f00`, layout.md `a43c21ae51a7ff6f1f510568876aea3485388c02`, DECOMPOSITION.md `b54472b27b5ceb1031914fdf2a04906b73be5cec`. No confirmed new findings; current gate Ready within the stated scope.
+
+| Milestone | Delivery tasks | Excluded review task | Assessment |
+| --- | --- | --- | --- |
+| 1.1 | 3 | T-004 | Cohesive bounded work with explicit dependencies and direct acceptance. |
+| 1.2 | 3 | T-008 | Cohesive bounded work with explicit dependencies and direct acceptance. |
+| 1.3 | 2 | T-011 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 1.4 | 0 (dedicated phase review) | T-012 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 2.1 | 2 | T-015 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 2.2 | 3 | T-019 | Cohesive bounded work with explicit dependencies and direct acceptance. |
+| 2.3 | 2 | T-022 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 2.4 | 0 (dedicated phase review) | T-023 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 3.1 | 2 | T-026 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 3.2 | 2 | T-029 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 3.3 | 0 (dedicated phase review) | T-030 | Intentional single review task; depends on all delivery milestones, not itself. |
+| 4.1 | 2 | T-033 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 4.2 | 2 | T-036 | Two retained tasks separate substantial geometry/lifecycle, controls/policy, or evidence/distribution responsibilities; no padding or single-field fragmentation. |
+| 4.3 | 0 (dedicated phase review) | T-037 | Intentional single review task; depends on all delivery milestones, not itself. |
 
 Unique monotonic IDs, exact PLAN parent names, four-space hierarchy, acyclic prior-ID prerequisites, contract coverage and owned paths checked. All implementation checkboxes remain unchecked. Milestone/phase code review and test/report work is explicit; final review carries full-list report/TODO aggregation.

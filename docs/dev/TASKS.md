@@ -113,4 +113,32 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
     - [ ] Milestone 3.3 — Phase review
         - [ ] T-030 — Review, test and report phase 3
             Depends on: delivery milestones 3.1, 3.2 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
-            Report: docs/dev/reports/phases/3/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.3.0 under the separately authorized release workflow.
+            Report: docs/dev/reports/phases/3/PHASE-REPORT.md. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.3.0 under the separately authorized release workflow.
+
+## Phase 4 — Session game configuration
+
+- [ ] Phase 4 — Session game configuration
+    - [ ] Milestone 4.1 — Validated settings and panel
+        - [ ] T-031 — Define normalized settings and defaults
+            Scope: src/settings/model.ts, tests/unit. Depends on: T-030.
+            Contract: C01 in SPEC. Outcome/evidence: Define six allowlisted values and pure validators, reject invalid in-memory changes and expose defaults without storage effects.
+        - [ ] T-032 — Integrate settings controls and next preview
+            Scope: src/ui/panel.ts, src/app/controller.ts, tests/browser. Depends on: T-031.
+            Contract: C01 in SPEC. Outcome/evidence: Use labeled keyboard-operable HTML controls, show queued piece without drawing supply, and prevent form keys from invoking gameplay.
+        - [ ] T-033 — Review, test and report milestone 4.1
+            Depends on: T-031, T-032. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/4/4.1.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 4.2 — Live policy transitions
+        - [ ] T-034 — Implement live settings transition semantics
+            Scope: src/app/controller.ts, src/domain/game.ts, src/ui/render.ts, tests/unit. Depends on: T-033.
+            Contract: C02 in SPEC. Outcome/evidence: Apply toggle rejection, preserved hold, ghost policy and explicit hard-drop/general-lock transitions with same-value no-reset behavior.
+        - [ ] T-035 — Verify session configuration and document controls
+            Scope: tests/browser, README.md, RELEASE-NOTES.md. Depends on: T-034.
+            Contract: C01,C02 in SPEC. Outcome/evidence: Check all options, mid-fall/grounded changes, disabled shortcuts, restart retention and default restoration on reload in both browsers.
+        - [ ] T-036 — Review, test and report milestone 4.2
+            Depends on: T-034, T-035. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
+            Report: docs/dev/reports/phases/4/4.2.md. Publish evidence and close constituent issues before milestone closure.
+    - [ ] Milestone 4.3 — Phase review
+        - [ ] T-037 — Review, test and report phase 4
+            Depends on: delivery milestones 4.1, 4.2 complete/closed, including their review tasks. Review cross-milestone code/invariants, run included SPEC exits and preserved regressions, repair blockers, and reconcile required reports and TODOs.
+            Report: docs/dev/reports/phases/4/PHASE-REPORT.md. Also produce docs/dev/reports/IMPLEMENTATION-REPORT.md with the full-list outcome and aggregated unresolved/deferred TODOs when this completes the intended list. After verified phase closure, integrate/recheck/publish the default branch and publish release v0.4.0 under the separately authorized release workflow.
