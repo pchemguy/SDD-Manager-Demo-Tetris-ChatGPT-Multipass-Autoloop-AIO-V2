@@ -101,7 +101,7 @@ Acceptance: Verify empty/occupied hold, repeated rejected hold, queue consumptio
 
 Owner: C-BOARD/C-PIECE/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Always draw an outline ghost at the exact target with no board mutation; suppress a coincident ghost under the active piece to avoid obscuring it. Hard drop awards no points. It uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
+Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01; suppress a coincident ghost under the active piece to avoid obscuring it. Hard drop awards no points. It uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
 
 Acceptance: Assert hard-drop and ghost cell equality on empty and irregular stacks, no tunneled ordinary drop, no board mutation by projection, and timing-policy behavior.
 
@@ -112,6 +112,14 @@ Owner: C-ENGINE in [DECOMPOSITION](DECOMPOSITION.md).
 Default general locking policy is interval. A grounded piece has no further valid downward progress. Start a 1000 ms deadline on entering grounded state, including spawn, soft/gravity descent and hard drop. Grounded horizontal/rotation actions and repeated hard drops do not restart it. Becoming airborne cancels it; re-grounding starts a fresh full interval. Failed downward attempts do not shorten it. At expiry, recheck landing validity and lock exactly once. Blur freezes both gravity and lock time.
 
 Acceptance: Check contact at t=0, 999 and 1000 ms; grounded motion, airborne cancellation/re-grounding, repeated hard drop, spawn-grounded cases, timer ties and large updates.
+
+## G01 — Dynamic ghost boundary
+
+Owner: C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
+
+Numbered board rows 0…9 are upper half and 10…19 lower half. With dynamic ghost visibility show the whole ghost only when every projected cell has y≥10; a projection containing y=9 is hidden even if other cells are lower. Visibility is recomputed after every relevant state change from the canonical landing.
+
+Acceptance: Test min landing y=9/10, a piece straddling rows 9/10, and movement/rotation causing hide/show in both directions; hiding does not affect hard drop.
 
 ## Q01 — Verification and distribution
 
