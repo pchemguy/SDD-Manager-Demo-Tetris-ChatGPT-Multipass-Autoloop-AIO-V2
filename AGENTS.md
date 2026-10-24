@@ -47,6 +47,7 @@ Maintain project-specific navigation and validated setup/check commands here as 
 
 
 
+
 ## Current project navigation
 
 Browser Tetris uses TypeScript, a pure domain engine, Canvas and ordinary HTML controls. Current contracts/design and intended paths are in [PROJECT](docs/dev/PROJECT.md), [ARCHITECTURE](docs/dev/ARCHITECTURE.md), [DECOMPOSITION](docs/dev/DECOMPOSITION.md), [SPEC](docs/dev/SPEC.md), [PLAN](docs/dev/PLAN.md) and [layout](docs/dev/layout.md). [TASKS](docs/dev/TASKS.md) owns implementation work once accepted; [DOCS_PREPARATION](docs/dev/DOCS_PREPARATION.md) owns the current preparation boundary. Source/test/build paths in layout are planned; no setup or test command has been validated before implementation.

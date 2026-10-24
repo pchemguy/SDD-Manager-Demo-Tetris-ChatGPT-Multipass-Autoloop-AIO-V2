@@ -8,6 +8,7 @@ The paths below are intended implementation homes; listing them does not claim i
 | src/domain/game.ts | C-ENGINE: atomic command/time/lifecycle state | tests/unit/game.test.ts |
 | src/domain/randomizer.ts | C-PIECE: seeded bag supply; geometry in pieces.ts/board.ts and hold lifecycle in game.ts | tests/unit/randomizer.test.ts and piece/game fixtures |
 | src/app/controller.ts | C-INPUT: events, active time, frame/listener lifecycle | tests/unit/controller.test.ts; tests/browser/lifecycle.spec.ts |
+| src/settings/model.ts | C-SETTINGS: six-field schema, defaults and validation | tests/unit/settings.test.ts |
 | src/ui/render.ts, panel.ts, styles.css | C-VIEW: Canvas drawing, native controls and status | tests/browser/gameplay.spec.ts; screenshot evidence |
 | src/main.ts, index.html | Application composition and one controller root | tests/browser/smoke.spec.ts |
 | package.json, package-lock.json, tsconfig.json, vite.config.ts | Locked toolchain and static build ownership | Clean install, typecheck and build gates |
