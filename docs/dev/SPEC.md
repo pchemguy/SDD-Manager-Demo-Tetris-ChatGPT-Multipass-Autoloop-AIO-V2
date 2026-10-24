@@ -93,7 +93,7 @@ Offsets below are already in board coordinates (positive y down); do not invert 
 
 Owner: C-PIECE/C-ENGINE in [DECOMPOSITION](DECOMPOSITION.md).
 
-C or Shift holds at most once per active-piece lifecycle, subject to the penetrator restriction in P02. Empty hold stores the current identity and consumes the next queue piece; occupied hold swaps without drawing from the queue. A held piece returns in spawn orientation/position with fresh gravity and grounded state. Hold becomes available after lock; a colliding replacement spawn ends the game.
+C or Shift holds at most once per active-piece lifecycle, subject to the penetrator restriction in P02 and feature availability in C02. Empty hold stores the current identity and consumes the next queue piece; occupied hold swaps without drawing from the queue. A held piece returns in spawn orientation/position with fresh gravity and grounded state. Hold becomes available after lock; a colliding replacement spawn ends the game.
 
 Acceptance: Verify empty/occupied hold, repeated rejected hold, queue consumption, orientation reset and replacement spawn collision.
 
@@ -101,7 +101,7 @@ Acceptance: Verify empty/occupied hold, repeated rejected hold, queue consumptio
 
 Owner: C-BOARD/C-PIECE/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01; suppress a coincident ghost under the active piece to avoid obscuring it. Hard drop awards no points. It uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
+Space performs hard drop to the canonical landing: for an ordinary piece, descend from current position until the next row is blocked. Draw an outline ghost at the exact target with no board mutation, subject to G01 and C01; suppress a coincident ghost under the active piece to avoid obscuring it. Hard drop awards no points. Unless C02 selects immediate hard-drop locking, it uses the general locking rule: under failed-attempt locking, its terminal failed downward attempt locks; under interval locking it starts or preserves the grounded timer. Ignore repeated hard-drop keydown events.
 
 Acceptance: Assert hard-drop and ghost cell equality on empty and irregular stacks, no tunneled ordinary drop, no board mutation by projection, and timing-policy behavior.
 
@@ -117,7 +117,7 @@ Acceptance: Check contact at t=0, 999 and 1000 ms; grounded motion, airborne can
 
 Owner: C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 
-Numbered board rows 0…9 are upper half and 10…19 lower half. With dynamic ghost visibility show the whole ghost only when every projected cell has y≥10; a projection containing y=9 is hidden even if other cells are lower. Visibility is recomputed after every relevant state change from the canonical landing.
+Numbered board rows 0…9 are upper half and 10…19 lower half. In dynamic mode show the whole ghost only when every projected cell has y≥10; a projection containing y=9 is hidden even if other cells are lower. Visibility is recomputed after every relevant state change from the canonical landing.
 
 Acceptance: Test min landing y=9/10, a piece straddling rows 9/10, and movement/rotation causing hide/show in both directions; hiding does not affect hard drop.
 
@@ -144,6 +144,22 @@ Owner: C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
 Render every cell and border of the active penetrator entirely white; active ordinary and settled pieces never use white. Render a visible penetrator ghost as a white outline. Side panel shows exactly one lightning glyph per available bonus, with an accessible numeric label even at zero. Update on every award/spend and restart.
 
 Acceptance: Inspect screenshots for white active mode and ordinary settled colors; verify accessible count and 0–3 glyph updates after earn/spend.
+
+## C01 — Configuration controls and defaults
+
+Owner: C-SETTINGS/C-INPUT/C-VIEW in [DECOMPOSITION](DECOMPOSITION.md).
+
+Use six native labeled controls: ghost hidden/dynamic/shown (default dynamic), hardDrop true/false (true), next true/false (true), hardDropLock general/immediate (general), lock failed/interval (interval), hold true/false (true). Show one next piece in spawn orientation without consuming supply. Invalid in-memory settings changes are rejected without state mutation. In hidden ghost mode show no ghost; in shown mode apply no midline restriction; coincident ghost suppression still applies.
+
+Acceptance: Check all control options, defaults, keyboard form operation, next queue identity/no consumption, hidden/shown/dynamic differences and invalid change rejection.
+
+## C02 — Live settings transition
+
+Owner: C-SETTINGS/C-INPUT/C-ENGINE in [DECOMPOSITION](DECOMPOSITION.md).
+
+Apply a validated user change before the next input/frame render, without restarting game. Disabling hard drop or hold rejects its action without spending/consuming state; retain held identity for re-enable. Visibility changes redraw immediately. Hard-drop immediate locks a valid hard-drop destination in the same command; follow-general obeys selected lock mode. Changing general lock policy cancels the old grounded deadline; if newly interval and grounded, start a fresh full interval; if failed, wait for the next failed downward attempt. Same-value changes do not reset timers. Changing hard-drop policy alone does not retroactively lock an already dropped piece. Settings and held state survive feature toggles; restart clears held/game state but retains selected settings.
+
+Acceptance: Exercise each toggle mid-fall/grounded/game-over, lock-policy changes at 999 ms, same-value no-reset, disabled keyboard actions and form-focus isolation. Session-only settings reset on reload.
 
 ## Q01 — Verification and distribution
 
