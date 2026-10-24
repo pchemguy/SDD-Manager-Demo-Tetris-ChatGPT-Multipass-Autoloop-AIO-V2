@@ -65,7 +65,7 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
             Contract: E03 in SPEC. Outcome/evidence: Add once-per-piece hold, empty/swap queue semantics, spawn reset and collision game-over behavior; present held identity.
         - [ ] T-017 — Implement canonical landing and ghost projection
             Scope: src/domain/board.ts, src/ui/render.ts, tests/unit, tests/browser. Depends on: T-016.
-            Contract: E04 in SPEC. Outcome/evidence: Implement one shared ordinary landing query and ghost view; verify projected cells, coincidence and no state mutation.
+            Contract: E04,G01 in SPEC. Outcome/evidence: Implement one shared ordinary landing query and ghost view; verify projected cells, coincidence and no state mutation. Apply the min projected y=10 boundary and straddling hide/show cases.
         - [ ] T-018 — Implement hard-drop command integration
             Scope: src/domain/game.ts, src/app/controller.ts, tests/unit, tests/browser. Depends on: T-017.
             Contract: E04 in SPEC. Outcome/evidence: Wire Space to canonical landing and selected default locking behavior without points; reject key-repeat triggers.
@@ -78,7 +78,7 @@ All implementation work is pending. [SPEC](SPEC.md) owns behavior, [PLAN](PLAN.m
             Contract: E05 in SPEC. Outcome/evidence: Implement full-interval contact deadline, motion retention, airborne cancellation and chronological expiry; verify hard-drop and blur interactions.
         - [ ] T-021 — Verify and document integrated modern gameplay
             Scope: tests/browser, src/ui, README.md, RELEASE-NOTES.md. Depends on: T-020.
-            Contract: E01–E05 in SPEC. Outcome/evidence: Run modern-control and classic regression scenarios in both browsers; inspect ghost/hold screenshots and document controls, policy and release inputs.
+            Contract: E01–E05,G01 in SPEC. Outcome/evidence: Run modern-control/dynamic-ghost and classic regression scenarios in both browsers; inspect ghost/hold screenshots and document controls, policy and release inputs.
         - [ ] T-022 — Review, test and report milestone 2.3
             Depends on: T-020, T-021. Review the complete milestone code and integrations separately from test execution; repair required findings and verify exits/regressions. Record actual checks, limits and eligible TODOs with options/ownership.
             Report: docs/dev/reports/phases/2/2.3.md. Publish evidence and close constituent issues before milestone closure.

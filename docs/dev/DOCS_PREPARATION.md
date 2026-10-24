@@ -3,7 +3,7 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 3; current document DOCS-007; next DOCS-008.
+- Current pass: 3; current document DOCS-008; next authorized next-pass reset.
 - Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
 - Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
 - Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
@@ -39,7 +39,7 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | DOCS-005 | Pass 3; SPEC.md blob `05d92b29df9fa2b2b368bc720a9dacedad24f77b`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: SPEC-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-006 | Pass 3; PLAN.md blob `cd468b0d9a7a8b56aa84f0c79737bd8956e7bf1b`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-007 | Pass 3; layout.md blob `e4c3e47fcb70ce06a4beaf30527c6e01fa9c6376`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-008 | Scope 3 pending; prior-scope evidence retained in Git at bd7793aa7a3207c6a47242404f2c43163bb7194f. |
+| DOCS-008 | Pass 3; TASKS.md blob `ec6139e010f597cab226258e3c31dd1bcee9b08a`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: TASKS-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
 
 ## Initialization and current reset
@@ -54,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-DOCS-007 completion publication and issue #7 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
+DOCS-008 completion publication and issue #8 closure require confirmation. Recover actual subsequent effects by exact readback before replay. Next: authorized reset to the next predefined scope.
