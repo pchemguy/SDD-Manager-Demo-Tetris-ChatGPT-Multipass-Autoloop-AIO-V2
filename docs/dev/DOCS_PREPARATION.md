@@ -3,20 +3,20 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 1, playable classic baseline; next task DOCS-002.
+- Current pass: 1; current document DOCS-002; next DOCS-003.
 - Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
-- Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. This supplies design decisions, not acceptance of an unseen PROJECT. First PROJECT approval remains active; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
+- Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
 - Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
 - Reporting: Standard.
 
 ## Scope sequence
 
-1. Minimal classic baseline: keyboard-controlled 10×20 board, seven tetrominoes, movement, rotation, soft drop, fixed gravity, line clearing, line-based scoring, game over and restart. Exclude later enhancements from current product documents.
-2. Add hold, ghost, 7-bag randomization, wall kicks, hard drop and one full gravity interval of grounded lock delay, including hard drop.
-3. Hide the whole ghost when any projected cell lies above the board midline; show only when all cells are in its lower half.
-4. Add a hotkey-activated penetrator: spend one available bonus, pass through settled cells without destroying them, remain white until locking, and lock only fully inside the board without overlap. Regular pieces are never white. Hard drop and ghost share the lowest valid destination beyond blockers. Award one bonus per four-line clear, cap inventory at three, and show one side-panel symbol per available bonus.
-5. Add session-only controls and next preview: ghost hidden/dynamic/always shown; hard drop on/off; preview on/off; hard-drop lock follow-general/immediate; general lock failed-downward-attempt/full-gravity-interval; hold on/off. Defaults: dynamic ghost, hard drop/preview/hold on, interval lock, hard drop follows general lock. No settings survive reload.
-6. Persist each setting independently: valid explicit URL value, otherwise valid cookie, otherwise default. Save explicit valid URL values to cookies even when equal to defaults. Omitted parameters retain cookies. UI changes save the selected cookie and update its URL parameter, preserving unrelated parameters.
+1. **Playable classic baseline.** Minimal classic baseline: keyboard-controlled 10×20 board, seven tetrominoes, movement, rotation, soft drop, fixed gravity, line clearing, line-based scoring, game over and restart. Exclude later enhancements from current product documents.
+2. **Gameplay enhancements.** Add hold, ghost, 7-bag randomization, wall kicks, hard drop and one full gravity interval of grounded lock delay, including hard drop.
+3. **Conditional ghost visibility.** Hide the whole ghost when any projected cell lies above the board midline; show only when all cells are in its lower half.
+4. **Penetrator mode.** Add a hotkey-activated penetrator: spend one available bonus, pass through settled cells without destroying them, remain white until locking, and lock only fully inside the board without overlap. Regular pieces are never white. Hard drop and ghost share the lowest valid destination beyond blockers. Award one bonus per four-line clear, cap inventory at three, and show one side-panel symbol per available bonus.
+5. **Session-only configuration.** Add session-only controls and next preview: ghost hidden/dynamic/always shown; hard drop on/off; preview on/off; hard-drop lock follow-general/immediate; general lock failed-downward-attempt/full-gravity-interval; hold on/off. Defaults: dynamic ghost, hard drop/preview/hold on, interval lock, hard drop follows general lock. No settings survive reload.
+6. **Configuration persistence.** Persist each setting independently: valid explicit URL value, otherwise valid cookie, otherwise default. Save explicit valid URL values to cookies even when equal to defaults. Omitted parameters retain cookies. UI changes save the selected cookie and update its URL parameter, preserving unrelated parameters.
 
 ## Accepted exploration decisions
 
@@ -33,8 +33,13 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | Task | Current evidence / decision basis |
 | --- | --- |
 | DOCS-001 | All four original root files preserved byte for byte; default provenance seed and main merge verified. Initialization 8ca36e912d2f58b64a7f0969e71e02e774e6b5e2 published with exact ref readback; issue #1 closed/read back as completed. |
-| DOCS-002 | Pass 1 PROJECT proposed, blob `12ccc4615300ab245ad6fb14446784ee39740e6a`; first human approval pending. Reviewed against the accepted baseline, brief/content boundaries and root browser policy; no principal-scope gaps. README disclosure/usage links verified. |
-| DOCS-003–008 | Not started; dependent on first PROJECT approval. |
+| DOCS-002 | Pass 1; PROJECT.md blob `12ccc4615300ab245ad6fb14446784ee39740e6a`; human approval of published proposal 868ef24e060a4736685023519c14fe7f8310d094, 2026-10-24. Brief scope and links checked; exact presented blob retained. |
+| DOCS-003 | Not started in active pass. |
+| DOCS-004 | Not started in active pass. |
+| DOCS-005 | Not started in active pass. |
+| DOCS-006 | Not started in active pass. |
+| DOCS-007 | Not started in active pass. |
+| DOCS-008 | Not started in active pass. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
 
 ## Initialization and current reset
@@ -49,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-PROJECT proposal publication requires readback; after that, first PROJECT approval is the next boundary. DOCS-002 stays unchecked and issue #2 stays open. Do not author ARCHITECTURE until acceptance; then execute all six predefined passes under the recorded mode.
+DOCS-002 completion publication and issue #2 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
