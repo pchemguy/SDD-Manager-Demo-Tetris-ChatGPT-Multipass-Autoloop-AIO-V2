@@ -28,7 +28,11 @@ Ghost visibility is a presentation projection over the domain landing result. Hi
 
 An active-piece mode selects ordinary or penetrator traversal within the same geometry/landing boundary. Both modes share board storage and the atomic lock guard. Traversal permission never grants permission to overwrite settled cells. The engine owns bonus inventory and activation consumption; view code owns only the corresponding symbols and white active-piece style. Settled cells keep their piece identity palette after lock.
 
-There are no persistent browser data stores or network services. Restart resets game state in memory.
+## Configuration boundary
+
+A typed settings model supplies validated values and defaults. The controller owns the current settings snapshot; it applies feature flags to commands, supplies rule-policy changes to the engine, and gives visibility preferences to presentation. Disabled controls do not clear held pieces, queues or bonuses. Native HTML form focus is isolated from gameplay input handling.
+
+There are no persistent browser data stores or network services. Settings live only in the controller for the current page.
 
 ## Component route
 
