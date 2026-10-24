@@ -3,7 +3,7 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 1; current document DOCS-003; next DOCS-004.
+- Current pass: 1; current document DOCS-004; next DOCS-005.
 - Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
 - Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
 - Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
@@ -35,7 +35,7 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | DOCS-001 | All four original root files preserved byte for byte; default provenance seed and main merge verified. Initialization 8ca36e912d2f58b64a7f0969e71e02e774e6b5e2 published with exact ref readback; issue #1 closed/read back as completed. |
 | DOCS-002 | Pass 1; PROJECT.md blob `12ccc4615300ab245ad6fb14446784ee39740e6a`; human approval of published proposal 868ef24e060a4736685023519c14fe7f8310d094, 2026-10-24. Brief scope and links checked; exact presented blob retained. |
 | DOCS-003 | Pass 1; ARCHITECTURE.md blob `c2653cc916f9216ad335343a94051d9d402f303d`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
-| DOCS-004 | Not started in active pass. |
+| DOCS-004 | Pass 1; DECOMPOSITION.md blob `9a839868b12880f2af67e8e5b57d2278dd8d3273`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-005 | Not started in active pass. |
 | DOCS-006 | Not started in active pass. |
 | DOCS-007 | Not started in active pass. |
@@ -54,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-DOCS-003 completion publication and issue #3 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
+DOCS-004 completion publication and issue #4 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
