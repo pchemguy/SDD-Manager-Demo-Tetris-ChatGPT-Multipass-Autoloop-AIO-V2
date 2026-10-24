@@ -3,7 +3,7 @@
 ## Current control
 
 - Mode: autodoc/autoloop, requested by the human on 2026-10-24.
-- Current pass: 6; current document DOCS-005; next DOCS-006.
+- Current pass: 6; current document DOCS-006; next DOCS-007.
 - Authority: prepare six cumulative document passes, publish every owned commit, maintain policy-selected GitHub tracking. No implementation is authorized.
 - Approval: the human approved the initial interaction and technology recommendations on 2026-10-24. The human subsequently approved the published Pass 1 PROJECT proposal on 2026-10-24; later PROJECT and subsequent document checkpoints are preapproved by the selected mode. New material autoloop decisions are delegated with visible rationale.
 - Final stop: after Pass 6 DOCS-008, before DOCS-009 package QC, documentation integration or implementation.
@@ -37,7 +37,7 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 | DOCS-003 | Pass 6; ARCHITECTURE.md blob `0d2b0d91d0a452732847310adf73041d048d8576`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-004 | Pass 6; DECOMPOSITION.md blob `de9546942983309d3721df642c516e269d5b53a9`; preapproved by requested autodoc/autoloop and accepted scope sequence. Scope/content and design consistency reviewed; no unresolved material decision. |
 | DOCS-005 | Pass 6; SPEC.md blob `6da6963318a62a14ddd365e64929e2f301c06624`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: SPEC-REVIEW-REPORT.md; Ready within its stated scope. |
-| DOCS-006 | Scope 6 pending; prior-scope evidence retained in Git at 7f5f8be7fd899e036930aeb078ec948722c14d62. |
+| DOCS-006 | Pass 6; PLAN.md blob `d66d349a9c69928ab8ce6fa2d722c4457f6960bd`; preapproved by requested autodoc/autoloop and accepted scope sequence. Current owner QC: PLAN-REVIEW-REPORT.md; Ready within its stated scope. |
 | DOCS-007 | Scope 6 pending; prior-scope evidence retained in Git at 7f5f8be7fd899e036930aeb078ec948722c14d62. |
 | DOCS-008 | Scope 6 pending; prior-scope evidence retained in Git at 7f5f8be7fd899e036930aeb078ec948722c14d62. |
 | DOCS-009 | Not selected; remains open at the autoloop stop. |
@@ -54,4 +54,4 @@ The human's approval covers the proposed rules and TypeScript, pure engine, Canv
 
 ## Pending transitions
 
-DOCS-005 completion publication and issue #5 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
+DOCS-006 completion publication and issue #6 closure require confirmation. Recover actual subsequent effects by exact readback before replay. No implementation is authorized.
